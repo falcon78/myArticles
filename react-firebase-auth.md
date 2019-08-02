@@ -21,7 +21,7 @@ const firebaseConfig = {
     storageBucket: "infodate.appspot.com",
     messagingSenderId: "9817228",
     appId: "1:980089817228:we69a3b908"
-};
+} ;
 //　Firebaseインスタンスを初期化
 firebase.initializeApp(firebaseConfig);
 firebaseAuth =  firebase.auth();
