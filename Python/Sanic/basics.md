@@ -42,9 +42,12 @@ def func(request):
 - Getting URL queries
 
 ```python
-queries = request.args # dictionary
+queries = request.args 
 # {'arg1': ['value1', 'value2']}
-queries = request.query_string # unparsed string
+
+queries = request.query_string 
+# unparsed string
+
 queries = request.query_args # list
 # [['key1', 'value'], ['key2', 'value']]
 ```
