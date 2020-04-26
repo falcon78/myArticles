@@ -13,7 +13,8 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port="8000")
 ```
 
-# Configuring 
+# Configuring
+
 [Source](https://sanic.readthedocs.io/en/latest/sanic/config.html)
 
 - All the configuration lives in the app.config attribute. app.config is a dictionary.
@@ -29,8 +30,9 @@ db_setting = {
 app.config.update(db_setting)
 ```
 
-# Request Data 
-[Soucre](https://sanic.readthedocs.io/en/latest/sanic/request_data.html)
+# Request Data
+
+[Source](https://sanic.readthedocs.io/en/latest/sanic/request_data.html)
 
 - Getting attributes from JSON request
 
@@ -42,11 +44,11 @@ def func(request):
 - Getting URL queries
 
 ```python
-queries = request.args 
+queries = request.args
 # {'arg1': ['value1', 'value2']}
 
-queries = request.query_string 
-# unparsed string
+queries = request.query_string
+# un-parsed string
 
 queries = request.query_args # list
 # [['key1', 'value'], ['key2', 'value']]
@@ -59,4 +61,3 @@ form_data = request.form
 
 user = request.form.get('name')
 ```
-
