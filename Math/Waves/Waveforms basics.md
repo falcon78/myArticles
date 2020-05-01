@@ -24,8 +24,11 @@
   - **Generating square wave from sine waves**
 
     - Before combining
-      ![](../../images/square_wave_from_sine_before.png)
+    
+      ![](images/square_wave_from_sine_before.png)
     - After combining
-      ![](../../images/square_wave_from_sine.png)
+    
+      ![](images/square_wave_from_sine.png)
     - Components of a square wave
-      ![](../../images/components_of_square_wave.png)
+    
+      ![](images/components_of_square_wave.png)

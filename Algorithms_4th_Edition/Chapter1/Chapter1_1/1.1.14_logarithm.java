@@ -2,8 +2,8 @@ package Chapter1.Chapter1_1;
 
 class logarithm {
     public static void main(String[] args) {
-        int ans = lg(Integer.parseInt(args[0]));
-        System.out.println(ans);
+        int ans = 10;
+        System.out.println(lg(ans));
     }
 
     public static int lg(int n) {
