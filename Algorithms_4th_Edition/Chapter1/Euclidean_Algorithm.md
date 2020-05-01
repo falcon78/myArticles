@@ -18,7 +18,11 @@ Textbook Page 4
   ```js
   function gcd(p, q) {
       if (q === 0) return p
-      r = p % q
-      return gcd(p, r)
+      
+      return gcd(q, p % q)
   }
   ```
+
+<!--
+TODO: Learn about extended euclidean algorithm
+-->
