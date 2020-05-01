@@ -1,3 +1,5 @@
+package Library;
+
 /******************************************************************************
  *  Compilation:  javac StdDraw.java
  *  Execution:    java StdDraw
