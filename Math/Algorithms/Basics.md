@@ -1,15 +1,31 @@
 # Sum of multiples of x from 1 to n
+
 [Explanation](https://betterexplained.com/articles/techniques-for-adding-the-numbers-1-to-100/)
 
 - ex . Where x is 3 and n is 100
 
-```js {cmd="node"}
-const x = 3;
-const n = 100;
+```python {cmd}
+import math
 
-const lastNumber = Math.ceil(n - (n % x));
-const repeatingValue = x + lastNumber;
-const sum = repeatingValue * (Math.floor(n / x) / 2);
+x = 3
+n = 100
 
-console.log(sum);
+lastNumber = n - math.ceil(n % x)
+repeatingNumber = lastNumber + x
+repeatCount = (n // x) / 2
+
+sum = int(repeatingNumber * repeatCount)
+
+print(sum)
 ```
+
+# Recursion Factorial
+
+```python {cmd} 
+def ln(n):
+    if (n == 1 or n == 0):
+        return 1
+    return n * ln(n-1)
+
+print(ln(10))
+ ```
