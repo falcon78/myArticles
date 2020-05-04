@@ -8,7 +8,7 @@ public class BinarySearch {
         Arrays.sort(array);
         System.out.println(Arrays.toString(array));
 
-        int foundIndex = rank(array, 3, 0, array.length - 1, 0);
+        int foundIndex = rank(array, 3, 0, array.length - 1);
         System.out.println("Found at Index: " + foundIndex);
 
         System.out.println("smaller than count: " + smallerThanKey(array, 3, 0, array.length - 1));
@@ -19,20 +19,14 @@ public class BinarySearch {
     /*
     Returns the index of given array where the elements value is same as key
      */
-    public static int rank(int[] array, int key, int lo, int hi, int depth) {
-        for (int i = 0; i < depth; i++) {
-            System.out.print(" ");
-        }
-        System.out.print(lo + " " + hi);
-        System.out.println();
-
+    public static int rank(int[] array, int key, int lo, int hi) {
         if (lo >= hi) return -1;
 
         int mid = lo + (hi - lo) / 2;
         if (array[mid] > key)
-            return rank(array, key, lo, mid - 1, depth + 1);
+            return rank(array, key, lo, mid - 1);
         if (array[mid] < key)
-            return rank(array, key, mid + 1, hi, depth + 1);
+            return rank(array, key, mid + 1, hi);
         return mid;
     }
 

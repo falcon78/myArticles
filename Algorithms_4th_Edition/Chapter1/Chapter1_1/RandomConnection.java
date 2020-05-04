@@ -4,6 +4,9 @@ import Library.StdDraw;
 
 import java.util.Random;
 
+/*
+Exercise 1.1.31 Page 59
+ */
 public class RandomConnection {
 
     public static void main(String[] args) {
