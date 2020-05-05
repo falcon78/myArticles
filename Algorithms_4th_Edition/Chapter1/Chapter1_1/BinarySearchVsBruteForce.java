@@ -24,7 +24,6 @@ public class BinarySearchVsBruteForce {
             ints[i] = Integer.parseInt(strings.get(i).replaceAll("\\s", ""));
         }
         Arrays.sort(ints);
-        System.out.println(Arrays.toString(ints));
 
         int key = 999957;
 
@@ -39,7 +38,6 @@ public class BinarySearchVsBruteForce {
         BinarySearch.rank(ints, key, 0, ints.length);
         finish = System.currentTimeMillis() - start;
         System.out.println("Finished in (ms): " + finish);
-
     }
 
     public static int bruteForceSearch(int[] array, int key) {
