@@ -8,7 +8,6 @@ public class EuclidsAlgorithm {
     }
 
     public static int greatestCommonDivisor(int p, int q) {
-        System.out.println(p + " " + q);
         if (q == 0) return p;
 
         int remainder = p % q;
