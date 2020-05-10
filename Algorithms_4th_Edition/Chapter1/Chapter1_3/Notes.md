@@ -75,5 +75,35 @@ public class FixedCapacityStack<T> {
 
 Holding a reference to an item that is no longer needed is known as **Loitering**.
 
-## TODO: Write note about Iterable and Iterator Implementation
+## Itrables and Iterator
 
+```java
+import java.util.iterator;
+
+public someclass<T> {
+
+  public Iterator<T> iterator() {
+    return new CustomIterator();
+  }
+
+  private class CustomIterator implements Iterator<T> {
+    private int currentCounter = 0;
+
+    public boolean hasNext() {
+      // return bool if there is next element
+    }
+
+    public <T> next() {
+      // return next item and incerement counter
+    }
+
+    public void remove() {
+
+    }
+  }
+}
+```
+
+## Enable assertion check 
+
+- Put `-ea` in VM options.
