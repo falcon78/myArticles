@@ -18,9 +18,16 @@ public class Stack<T> implements Iterable<T> {
 
         for (int i = 0; i < 10; i++)
             stack.push(i);
+        assert stack.peek() == 9;
 
         for (int num : stack)
             assert stack.pop() == num;
+
+        try {
+            stack.peek();
+        } catch (IllegalArgumentException e) {
+            assert e.getMessage().equals("Stack Underflow");
+        }
 
     }
 
@@ -49,6 +56,12 @@ public class Stack<T> implements Iterable<T> {
         first = newNode;
 
         N++;
+    }
+
+    public T peek() {
+        if (isEmpty()) throw new IllegalArgumentException("Stack Underflow");
+
+        return first.item;
     }
 
     public Iterator<T> iterator() {

@@ -23,18 +23,18 @@ Objects that allow you to iterate through them.
 
   First in, First out. Pops items in the order they are pushed.
 
-- **Pushdown Stacks (Stack)**
+- **Pagedown Stacks (Stack)**
 
   Last in first out
 
-## Arithmeric expression
+## Arithmetic expression
 
 - **Dijkstra's Two-Stack Algorithm**
 
   - Push operands onto the operand stack.
   - Push operators onto the operator stack.
-  - Ignore left parantheses.
-  - On encountering a right paranthesis, pop an operator, pop the requisite numbers (operands), and push onto the operand stack the result of applying that operator to those operands.
+  - Ignore left parentheses.
+  - On encountering a right parenthesis, pop an operator, pop the requisite numbers (operands), and push onto the operand stack the result of applying that operator to those operands.
 
 ## Generics
 
@@ -75,7 +75,7 @@ public class FixedCapacityStack<T> {
 
 Holding a reference to an item that is no longer needed is known as **Loitering**.
 
-## Itrables and Iterator
+## Iterables and Iterator
 
 ```java
 import java.util.iterator;
@@ -94,7 +94,7 @@ public someclass<T> {
     }
 
     public <T> next() {
-      // return next item and incerement counter
+      // return next item and increment counter
     }
 
     public void remove() {
