@@ -3,12 +3,12 @@ package Chapter1.Chapter1_3;
 /*
 Exercise 1.3.10 Page 162
 Input: ( ( 1 + 2 ) * ( ( 3 - 4 ) * ( 5 - 6 ) ) )
-Output: 1 + 2 ) * 3 - 4 ) * 5 - 6 ) ) )
+Output: 1 2 + 3 4 - 5 6 - * *
  */
 public class InfixToPostFix {
     public static void main(String[] args) throws IllegalAccessException {
         String input = "( ( 1 + 2 ) * ( ( 3 - 4 ) * ( 5 - 6 ) ) )";
-        String expectedOutput = "1 + 2 ) * 3 - 4 ) * 5 - 6 ) ) )";
+        String expectedOutput = "1 2 + 3 4 - 5 6 - * *";
 
         String output = convert(input);
         System.out.println(output);
@@ -27,7 +27,7 @@ public class InfixToPostFix {
                 String operandOne = operands.pop();
                 String operandTwo = operands.pop();
                 String operator = operators.pop();
-                operands.push(operandTwo + " " + operator + " " + operandOne + " )");
+                operands.push(operandTwo + " " + operandOne + " " + operator);
             } else if (!s.equals("(")) {
                 operands.push(s);
             }
