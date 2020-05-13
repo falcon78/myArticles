@@ -1,5 +1,4 @@
 # Procrastination , Memory, and Sleep
-#learning-how-to-learn/week1/procrastination-memory-sleeep#
 
 # Procrastination
 [Course Link](https://www.coursera.org/learn/learning-how-to-learn/lecture/Dci3o/a-procrastination-preview)

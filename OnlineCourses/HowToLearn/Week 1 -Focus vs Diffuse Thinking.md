@@ -1,5 +1,4 @@
 # Focus vs Diffuse Thinking
-#learning-how-to-learn/week1/focus-and-diffuse-thinking#
 
 ### Brains have different modes of thinking
 
