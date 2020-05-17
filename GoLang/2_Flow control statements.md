@@ -1,5 +1,4 @@
 # Flow control statements
-#goLang/basics/flow-control-statemets
 
 ### Basic for loop
 

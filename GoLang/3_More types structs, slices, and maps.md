@@ -1,27 +1,33 @@
 # More types: structs, slices, and maps
-#golang/basics/pointers-structs-slices-maps
 
 # Pointers
+
 The type `*T` holds the memory address of a value. The zero value of a pointer is `nil`.
+
 ```go
 var p *int
 ```
 
 The `&` the operator generates a pointer to its operand.
+
 ```go
 i := 42;
 pointer = &i;
 ```
 
 The `*` operator denotes the pointer's underlying value.
+
 ```go
 fmt.Println(*p) // read i through the pointer p
 *p = 20 // set i through the pointer p
 ```
+
 Unlike `C`, go has no pointer arithmetic.
 
 # Structs
+
 A `struct` is a collection of fields.
+
 ```go
 type Vertex struct {
 	X int
@@ -35,6 +41,7 @@ func main() {
 ```
 
 You can access a struct field with a dot.
+
 ```go
 v := Vertex{1,2}
 v.X = 4
@@ -42,7 +49,9 @@ fmt.Println(v.Y)
 ```
 
 ### Pointers to struct
+
 To access to a struct member through pointer you can use `(*p).X` or to make it simple you could just do `p.X` without explicit dereference.
+
 ```go
 v := Vertex{1,2}
 p := &v
@@ -51,34 +60,43 @@ p.Y = 90
 ```
 
 ### Struct literals
+
 Manually assigning to structs
+
 ```go
 v1 := Vertex{X: 1, Y: 2}
 v2 := Vertex{X: 1} // Y ==> 0 (default value is automatically assigned)
 v3 := Vertex{} // X: 0, Y: 0
 ```
+
 The prefix `&` return pointer to the struct value.
+
 ```go
 pointer := &Vertex{1,2}
 ```
 
 # Arrays
+
 Arrays cannot be resized.
+
 ```go
 var a [2]string
 a[0] = “Hello”
 a[1] = “World”
 fmt.Println(a)
 ```
+
 ```go
 primes := [6]int{2,3,5,7,11,13}
 primes := [...]int{2,3,5,7,11,13} // auto count length
 ```
 
 # Slices
+
 [Go Slices: usage and internals - The Go Blog](https://blog.golang.org/slices-intro)
 
-Slices are dynamically sized, flexible view into the elements of an array. A slice if formed by specifying start and end indices. `a[low:high]`  The last element is excluded.
+Slices are dynamically sized, flexible view into the elements of an array. A slice if formed by specifying start and end indices. `a[low:high]` The last element is excluded.
+
 ```go
 primes := [5]{2,3,5,7,11}
 
@@ -87,19 +105,25 @@ fmt.Println(s) // 3,5,7
 ```
 
 ### Slices are like references to arrays
+
 A slice does not store any data, but holds a reference to the underlying array. Changes to slices will also propogate to the underlying arrays. ~Other slices that share the same array will also see those changes.~
 
 ### Slice literals
-A  slice literal is like an array literal without the length.
+
+A slice literal is like an array literal without the length.
+
 ```go
-[3]bool{true, false, true, false} // array literal
+[4]bool{true, false, true, false} // array literal
 ```
+
 ```go
 []bool{true, true, false} // slice literal
 ```
+
 Struct literal with slice literal
+
 ```go
-s := []struct { 
+s := []struct {
 	i int
 	b bool
 }{
@@ -111,8 +135,10 @@ fmt.Println(s)
 ```
 
 ### Slice defaults
+
 When slicing you can omit the high or low bounds.
 For the array `var a [10]int` these slices are equivalent.
+
 ```go
 a[0:10]
 a[:10]
@@ -121,9 +147,11 @@ a[:]
 ```
 
 ### Slice length and capacity.
-A slice has length and capacity. 
+
+A slice has length and capacity.
 `len(s)` - Number of elements a slice contains.
 `cap(s)` - Number of elements in underlying array, ~counting from the first element in slice.~
+
 ```go
 s := []int{2, 3, 5, 7, 11, 13} // len=6, cap=6
 s = s[:0] // len=0, cap=6
@@ -132,23 +160,31 @@ s = s[2:] // len=2, cap=4
 ```
 
 ### Nil Slices
+
 The zero value of a slice is `nil`
+
 ```go
 var s []int // len = 0, cap = 0
 ```
 
 ### Creating slices with make
+
 The `make` function allocates zeroed array and returns a slice that refers to that array.
+
 ```go
 a := make([]int, 5) // len=5, cap=5 // [0,0,0,0,0]
 ```
+
 To specify a capacity, pass a third argument.
+
 ```go
 a := make([]int, 0, 5) // len=0, cap=5, []
 ```
 
 ### Slices of slices
+
 Slices may contain any type, including other slices.
+
 ```go
 board := [][]string{
 	[]string{“_”,”_”,”_”},
@@ -160,7 +196,9 @@ fmt.Print(board) // [[_ _ _] [_ _ _] [_ _ _]]
 ```
 
 ### Appending to a slice
+
 You can append new elements to a slice using the `append` function. The `append` function returns a new slice. If the backing array of a slice is too small to fit all given elements, new array will be allocated. The returned slice will point to the newly allocated array.
+
 ```go
 var s []int
 // append to a nil slice
@@ -169,3 +207,90 @@ s = append(s, 1) // len=2, cap=2, [0, 1]
 s = append(s, 2, 3, 4) // len=5, cap=8, [0, 1, 2, 3, 4]
 ```
 
+### Range
+
+You can iterate an array or map using `range`.
+
+- Maps
+
+```go {cmd="go" args=["run"]}
+package main
+
+func main() {
+	hashmap := make(map[string]int)
+	hashmap["one"] = 1
+	for key, value := range hashmap {
+		println(key, value)
+	}
+}
+```
+
+- Arrays
+
+```go {cmd}
+for i, value := range arr {
+	println(i, value)
+}
+```
+
+### Maps
+
+Maps have a zero value of `nil`. A `nil` map has no keys, nor can keys be added.
+To use a map you need to instantiate it with `make` function.
+
+```go
+make(map[String]int)
+```
+
+- Map literals
+
+```go
+hashmap := map[string]int{
+	"one": 1
+}
+```
+
+- Mutating maps
+
+1. Insert or Update
+   `m[key] = elem`
+2. Retrieve an element
+   `elem := m[key]`
+3. Delete an element
+   `delete(m, key)`
+4. Test that a key is present in map
+   `elem, ok := m[key]`
+   If the key exists then ok is `true`, and if not ok is `false` and elem is the zero value for the map's element type.
+
+# Function values
+
+Function can be passed around as values. 
+
+```go
+sumFunction := func(x,y) int {
+	return x+y
+}
+
+sum = sumFunction(1,2)
+```
+
+- Go supports closure
+
+```go {cmd='go' args=['run']} 
+package main 
+
+func adder() func(int) int {
+	sum := 0
+	return func(x int) int {
+		sum += x
+		return sum
+	}
+}
+
+func main() {
+	add := adder()
+	add(3)
+	add(4)
+	print(add(0)) // 7
+}
+```

@@ -1,5 +1,4 @@
 # Basic Syntax
-#goLang/basics/basic-syntax
 
 ### Packages
 

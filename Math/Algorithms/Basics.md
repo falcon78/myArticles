@@ -12,20 +12,20 @@ n = 100
 
 lastNumber = n - math.ceil(n % x)
 repeatingNumber = lastNumber + x
-repeatCount = (n // x) / 2
+repeatCount = n // x
 
-sum = int(repeatingNumber * repeatCount)
+sum = int((repeatingNumber * repeatCount) / 2)
 
 print(sum)
 ```
 
 # Recursion Factorial
 
-```python {cmd} 
+```python {cmd}
 def ln(n):
     if (n == 1 or n == 0):
         return 1
     return n * ln(n-1)
 
 print(ln(10))
- ```
+```
