@@ -1,7 +1,5 @@
 package Chapter1.Chapter1_3;
 
-import java.util.Arrays;
-
 public class EvaluatePostFix {
     public static void main(String[] args) throws IllegalAccessException {
         String expression;
