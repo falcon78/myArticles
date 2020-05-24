@@ -60,7 +60,7 @@ func main() {
 - Methods and pointer indirection
 
 If a function has a pointer argument ex.`func someFunc(a *int)` you have to pass a pointer to it, passing a value in this case yields an error.
-But methods with pointer receiver takes either pointer or value.
+But methods with pointer receiver can take either pointer or value.
 
 ```go
 func (v *Vertex) Scale(f float64) {
@@ -241,18 +241,18 @@ They are used by codes that deal with unknown type. Eg, fmt.Print takes any numb
 
 ```go
 func main() {
-	var i interface{}
-	describe(i) // (<nil>, <nil>)
+    var i interface{}
+    describe(i) // (<nil>, <nil>)
 
-	i = 42
-	describe(i) // (42, int)
+    i = 42
+    describe(i) // (42, int)
 
-	i = "hello"
-	describe(i) // (hello, string)
+    i = "hello"
+    describe(i) // (hello, string)
 }
 
 func describe(i interface{}) {
-	fmt.Printf("(%v, %T)\n", i, i)
+    fmt.Printf("(%v, %T)\n", i, i)
 }
 
 ```
@@ -276,4 +276,102 @@ You can also receive `ok` to prevent panic
 ```go
 var i interface{} = "string"
 v, ok := i.(int) // v --> 0, ok --> false
+```
+
+## Type Switches
+
+A type switch is a construct that permits several type assertions in series.
+
+```go {cmd='go' args=['run']}
+package main
+
+import "fmt"
+
+func do(i interface{}) {
+    switch v := i.(type) {
+    case int:
+        // Value: 21 Type : Int
+        fmt.Printf("Value: %v Type: %T\n", v, v*2)
+    case string:
+        // Value: hello Type : string
+        fmt.Printf("Value: %v Type: %T\n", v, v)
+    default:
+        // Value: 21.21 Type : float64
+        fmt.Printf("Value: %v Type: %T\n", v, v)
+    }
+}
+
+func main() {
+    do(21)
+    do("hello")
+    do(21.12)
+}
+```
+
+## Errors
+
+Go programs express error with `error` values.
+
+```go
+type error interface {
+    Error() string
+}
+```
+
+- Handling errors
+
+  - A nil `error` denotes success; a non-nil `error` denotes failure.
+
+```go
+type MyError struct {
+    When time.Time
+    What string
+}
+
+func (e *MyError) Error() string {
+    return fmt.Sprintf("at %v, %s",
+        e.When, e.What)
+}
+
+func run() error {
+    return &MyError{
+        time.Now(),
+        "it didn't work",
+    }
+}
+
+func main() {
+    if err := run(); err != nil {
+        fmt.Println(err) // 2020-05-18... It didn't work
+    }
+}
+```
+
+## Readers
+
+The io package specifies the io.Reader interface, which represents the read end of a stream of data.
+
+The Go standard library contains many implementations of these interfaces, including files, network connections, compressors, ciphers, and others.
+
+The io.Reader interface has a Read method:
+
+```go
+func (T) Read(b []byte) (n int, err error)
+```
+
+Read populates the given byte slice with data and returns the number of bytes populated and an error value. It returns an io.EOF error when the stream ends.
+
+
+```go
+r := strings.NewReader("Hello Reader")
+
+b := make([]byte, 2)
+for {
+    // n is number if bytes read
+    n, err := r.Read(b)
+    fmt.Printf("b[:n] = %q\n", b[:n])
+    if err == io.EOF {
+        break
+    }
+}
 ```

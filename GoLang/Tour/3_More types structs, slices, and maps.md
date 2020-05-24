@@ -30,8 +30,8 @@ A `struct` is a collection of fields.
 
 ```go
 type Vertex struct {
-	X int
-	Y int
+    X int
+    Y int
 }
 
 func main() {
@@ -124,11 +124,11 @@ Struct literal with slice literal
 
 ```go
 s := []struct {
-	i int
-	b bool
+    i int
+    b bool
 }{
-	{2, true},
-	{3, false}
+    {2, true},
+    {3, false}
 }
 
 fmt.Println(s)
@@ -187,9 +187,9 @@ Slices may contain any type, including other slices.
 
 ```go
 board := [][]string{
-	[]string{“_”,”_”,”_”},
-	[]string{“_”,”_”,”_”},
-	[]string{“_”,”_”,”_”},
+    []string{“_”,”_”,”_”},
+    []string{“_”,”_”,”_”},
+    []string{“_”,”_”,”_”},
 }
 
 fmt.Print(board) // [[_ _ _] [_ _ _] [_ _ _]]
@@ -217,11 +217,11 @@ You can iterate an array or map using `range`.
 package main
 
 func main() {
-	hashmap := make(map[string]int)
-	hashmap["one"] = 1
-	for key, value := range hashmap {
-		println(key, value)
-	}
+    hashmap := make(map[string]int)
+    hashmap["one"] = 1
+    for key, value := range hashmap {
+        println(key, value)
+    }
 }
 ```
 
@@ -229,7 +229,7 @@ func main() {
 
 ```go {cmd}
 for i, value := range arr {
-	println(i, value)
+    println(i, value)
 }
 ```
 
@@ -246,7 +246,7 @@ make(map[String]int)
 
 ```go
 hashmap := map[string]int{
-	"one": 1
+    "one": 1
 }
 ```
 
@@ -264,11 +264,11 @@ hashmap := map[string]int{
 
 # Function values
 
-Function can be passed around as values. 
+Function can be passed around as values.
 
 ```go
 sumFunction := func(x,y) int {
-	return x+y
+    return x+y
 }
 
 sum = sumFunction(1,2)
@@ -276,21 +276,21 @@ sum = sumFunction(1,2)
 
 - Go supports closure
 
-```go {cmd='go' args=['run']} 
-package main 
+```go {cmd='go' args=['run']}
+package main
 
 func adder() func(int) int {
-	sum := 0
-	return func(x int) int {
-		sum += x
-		return sum
-	}
+    sum := 0
+    return func(x int) int {
+        sum += x
+        return sum
+    }
 }
 
 func main() {
-	add := adder()
-	add(3)
-	add(4)
-	print(add(0)) // 7
+    add := adder()
+    add(3)
+    add(4)
+    print(add(0)) // 7
 }
 ```
