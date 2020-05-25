@@ -14,8 +14,9 @@ public class LinkedList<T> {
     private Node first;
     private Node last;
 
-    /***
+    /**
      * Insert a item at the end of a linked list.
+     *
      * @param item Item to insert.
      */
     void insert(T item) {
@@ -32,9 +33,10 @@ public class LinkedList<T> {
         size++;
     }
 
-    /***
+    /**
      * Exercise 1.3.20
      * Deletes element on a linked list at a given index i.
+     *
      * @param i Index of element to delete
      * @throws IllegalArgumentException When index is out of bounds.
      */
@@ -62,8 +64,9 @@ public class LinkedList<T> {
         size--;
     }
 
-    /***
+    /**
      * Get item of a linked list at index i.
+     *
      * @param i Index of a element.
      * @return Item at a given index of a linked list.
      * @throws IllegalArgumentException When index is out of bounds.
@@ -80,9 +83,10 @@ public class LinkedList<T> {
         return current.item;
     }
 
-    /***
+    /**
      * Exercise 1.3.21
      * Check whether a given item is present in the linked list.
+     *
      * @param item Value to check.
      * @return Return true if the given item exists in the list,
      * returns false otherwise.
@@ -96,10 +100,11 @@ public class LinkedList<T> {
         return false;
     }
 
-    /***
+    /**
      * Exercise 1.3.26
      * Remove every element in a linked list whose value is equal to
      * the given item.
+     *
      * @param item Item to delete in liked list.
      */
     void removeIfEqual(T item) {
@@ -121,9 +126,10 @@ public class LinkedList<T> {
         }
     }
 
-    /***
+    /**
      * Exercise 1.3.24
      * Remove element that is next to the given node.
+     *
      * @param node Node of a linked list
      */
     void removeAfter(Node node) {
@@ -133,10 +139,11 @@ public class LinkedList<T> {
         size--;
     }
 
-    /***
+    /**
      * Exercise 1.3.25
      * Insert nodeB next to nodeA.
-     * @param nodeA Node before the insert position 
+     *
+     * @param nodeA Node before the insert position
      * @param nodeB Node to insert
      */
     void insertAfter(Node nodeA, Node nodeB) {
@@ -152,12 +159,13 @@ public class LinkedList<T> {
         size++;
     }
 
-    /***
+    /**
      * Exercise 1.3.28
      * Recursive function to find the maximum integer in a linked list.
+     *
      * @param node Starting position of a linked list.
-     * @param max Current maximum value for the recursive function.
-     * @return maximum value 
+     * @param max  Current maximum value for the recursive function.
+     * @return maximum value
      */
     int max(Node node, int max) {
         if (!(first.item instanceof Integer)) {
@@ -171,9 +179,10 @@ public class LinkedList<T> {
         return max(node.next, Math.max((int) node.item, max));
     }
 
-    /***
+    /**
      * Exercise 1.3.28
      * recursive function to find the maximum integer in a linked list.
+     *
      * @param node starting position of a linked list.
      * @return Maximum value.
      */
@@ -181,8 +190,34 @@ public class LinkedList<T> {
         return max(node, 0);
     }
 
-    /***
+    /**
+     * Exercise 1.3.30
+     * Reverse a linked list in place.
+     *
+     * @return First item of a linked list.
+     */
+    T reverseInPlace() {
+        if (size < 2) return first.item;
+
+        Node previous = null;
+        Node current = first;
+        last = first;
+
+        while (current != null) {
+            Node next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+        first = previous;
+
+        assert first != null;
+        return first.item;
+    }
+
+    /**
      * Returns the string representation of a linked list.
+     *
      * @return String representation of a linked list.
      */
     public String toString() {
@@ -198,9 +233,10 @@ public class LinkedList<T> {
         return str.toString();
     }
 
-    /***
+    /**
      * Check if the insert position or delete position i is inside the size range of
      * a linked list.
+     *
      * @param i Index to perform insertion or deletion.
      * @throws IllegalArgumentException When index is out of bounds.
      */
@@ -212,22 +248,23 @@ public class LinkedList<T> {
         }
     }
 
-    /***
+    /**
      * @return First element of a linked list.
      */
     T first() {
         return first.item;
     }
 
-    /***
+    /**
      * @return Last element of a linked list.
      */
     T last() {
         return last.item;
     }
 
-    /***
+    /**
      * Check is a linked list is empty.
+     *
      * @return Boolean that indicates whether a linked list is empty or nor.
      */
     boolean isEmpty() {
@@ -319,5 +356,26 @@ public class LinkedList<T> {
         list.insert(500);
         assert list.max(list.first) == 500;
         System.out.println(list);
+
+        LinkedList<Integer> reverseTest = new LinkedList<>();
+        reverseTest.insert(1);
+        assert reverseTest.reverseInPlace() == 1;
+
+        reverseTest.insert(2);
+        assert reverseTest.reverseInPlace() == 2;
+
+        reverseTest.delete(0);
+        reverseTest.delete(0);
+
+        for (int i = 0; i < 10; i++) {
+            reverseTest.insert(i);
+        }
+        reverseTest.reverseInPlace();
+        System.out.println(reverseTest);
+        int index = 0;
+        for (int i = 9; i >= 0; i--) {
+            assert reverseTest.get(index).equals(i);
+            index++;
+        }
     }
 }
