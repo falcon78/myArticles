@@ -20,17 +20,16 @@ public class DoublyLinkedList<T> {
     private int size;
 
     public void insertAtBeginning(T item) {
-        if (isEmpty()) {
-            first = new DoubleNode();
-            first.item = item;
+        DoubleNode oldFirst = first;
+        first = new DoubleNode();
+        first.item = item;
+        first.next = oldFirst;
+
+        if (oldFirst != null)
+            oldFirst.before = first;
+        else
             last = first;
-        } else {
-            DoubleNode newNode = new DoubleNode();
-            newNode.item = item;
-            newNode.next = first;
-            first.before = newNode;
-            first = newNode;
-        }
+
         size++;
     }
 
@@ -39,17 +38,12 @@ public class DoublyLinkedList<T> {
             insertAtBeginning(item);
             return;
         }
-        DoubleNode newNode = new DoubleNode();
-        newNode.item = item;
-        if (last.before == null) {
-            last = newNode;
-            first.next = last;
-            last.before = first;
-        } else {
-            newNode.before = last;
-            last.next = newNode;
-            last = newNode;
-        }
+
+        DoubleNode oldLast = last;
+        last = new DoubleNode();
+        last.item = item;
+        last.before = oldLast;
+        oldLast.next = last;
 
         size++;
     }
@@ -57,8 +51,7 @@ public class DoublyLinkedList<T> {
     public void removeAtBeginning() {
         if (isEmpty()) throw new IllegalArgumentException("Out of Bounds");
         if (first == last) {
-            first = null;
-            last = null;
+            flush();
         } else {
             first = first.next;
             first.before = null;
@@ -69,8 +62,7 @@ public class DoublyLinkedList<T> {
     public void removeAtEnd() {
         if (isEmpty()) throw new IllegalArgumentException("Out of Bounds");
         if (first == last) {
-            first = null;
-            last = null;
+            flush();
         } else {
             last = last.before;
             last.next = null;
@@ -188,23 +180,22 @@ public class DoublyLinkedList<T> {
 
         while (currentNode != null) {
             stringBuilder.append("( ");
-            if (currentNode.before != null) {
+
+            if (currentNode.before != null)
                 stringBuilder.append(currentNode.before.item);
-            } else {
+            else
                 stringBuilder.append("null");
-            }
+
             stringBuilder.append(" <- ").append(currentNode.item).append(" -> ");
 
-            if (currentNode.next != null) {
+            if (currentNode.next != null)
                 stringBuilder.append(currentNode.next.item);
-            } else {
+            else
                 stringBuilder.append("null");
-            }
 
             stringBuilder.append(" ) ");
             currentNode = currentNode.next;
         }
-
         return stringBuilder.toString();
     }
 
@@ -220,6 +211,7 @@ public class DoublyLinkedList<T> {
 
     public void flush() {
         first = null;
+        last = null;
         size = 0;
     }
 
