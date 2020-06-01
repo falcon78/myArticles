@@ -1,4 +1,5 @@
 # Euclidean Algorithm or Euclid's Algorithm
+[[Algorithmn Basics]]
 
 Textbook Page 4
 [Explanation](https://en.wikipedia.org/wiki/Euclidean_algorithm)

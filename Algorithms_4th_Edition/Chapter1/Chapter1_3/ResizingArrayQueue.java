@@ -7,14 +7,17 @@ public class ResizingArrayQueue<T> {
     public static void main(String[] args) {
         ResizingArrayQueue<Integer> queue = new ResizingArrayQueue<>(1);
         assert queue.internalArraySize() == 1;
+        assert queue.size() == 0;
 
         for (int i = 0; i < 100; i++) {
             queue.enqueue(i);
         }
         assert queue.internalArraySize() > 100;
+        assert queue.size() == 100;
 
         for (int i = 0; i < 100; i++)
             assert queue.dequeue() == i;
+        assert queue.size() == 0;
     }
 
     private T[] queue;
@@ -36,10 +39,19 @@ public class ResizingArrayQueue<T> {
         if (head < 0) throw new IndexOutOfBoundsException();
 
         T item = queue[0];
-        System.arraycopy(queue, 1, queue, 0, head);
-        queue[head--] = null;
+        if (head - 1 >= 0) System.arraycopy(queue, 1, queue, 0, head - 1);
+        queue[--head] = null;
         if ((double) head / N < 0.25) shrink();
         return item;
+    }
+
+    public T getAt(int i) {
+        if (i >= head) throw new IllegalArgumentException("Out of bounds");
+        return queue[i];
+    }
+
+    public int size() {
+        return head;
     }
 
     public int internalArraySize() {

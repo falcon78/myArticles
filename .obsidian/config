@@ -1,0 +1,46 @@
+{
+  "theme": "obsidian",
+  "pluginEnabledStatus": {
+    "File explorer": true,
+    "Search": true,
+    "Quick switcher": true,
+    "Graph view": true,
+    "Backlinks": true,
+    "Command palette": true,
+    "Markdown format importer": true,
+    "Word count": true
+  },
+  "isSidebarCollapsed": false,
+  "isRightSidedockCollapsed": false,
+  "lastOpenSidebarTab": "File explorer",
+  "workspaceLayout": {
+    "id": "38fd6f96400d2549",
+    "type": "split",
+    "dimension": null,
+    "direction": "vertical",
+    "children": [
+      {
+        "id": "f9a33b49ee84e8df",
+        "type": "leaf",
+        "dimension": null,
+        "active": true,
+        "master": "",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Algorithms_4th_Edition/Map.md.md",
+            "mode": "source"
+          }
+        }
+      }
+    ]
+  },
+  "lastOpenFiles": [
+    "Algorithms_4th_Edition/Untitled.md",
+    "java_out/production/myArticles/production/myArticles/Chapter1/Chapter1_1/Euclidean_Algorithm.md",
+    "java_out/production/myArticles/Chapter1/Chapter1_1/Euclidean_Algorithm.md",
+    "Algorithms_4th_Edition/Chapter1/Chapter1_1/Euclidean_Algorithm.md",
+    "GoLang/RandomGoNotes.md"
+  ],
+  "lastOpenRightSidedockTab": "Backlinks"
+}

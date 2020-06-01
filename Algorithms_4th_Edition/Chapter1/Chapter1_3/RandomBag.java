@@ -7,7 +7,7 @@ import java.util.Iterator;
  * An implementation of bag ADT that iterates randomly
  */
 public class RandomBag<T> implements Iterable<T> {
-    private ArrayList<T> items;
+    private final ArrayList<T> items;
 
     public RandomBag() {
         items = new ArrayList<>();

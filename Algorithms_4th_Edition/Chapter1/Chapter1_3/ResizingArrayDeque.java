@@ -1,7 +1,5 @@
 package Chapter1.Chapter1_3;
 
-import java.util.Arrays;
-
 /**
  * Exercise 1.3.33
  * Implementation of Deque ADT using resizing arrays.
@@ -15,32 +13,25 @@ public class ResizingArrayDeque<T> {
     }
 
     public void pushLeft(T item) {
-        for (int i = size; i > 0; i--) {
-            items[i] = items[i - 1];
-        }
+        if (size >= 0) System.arraycopy(items, 0, items, 1, size);
         items[0] = item;
         size++;
         expand();
-        System.out.println(Arrays.toString(items));
     }
 
     public void pushRight(T item) {
         items[size] = item;
         size++;
         expand();
-        System.out.println(Arrays.toString(items));
     }
 
     public T popLeft() {
         if (isEmpty()) throw new IllegalArgumentException("Out of bounds");
         T popValue = items[0];
-        for (int i = 0; i < size - 1; i++) {
-            items[i] = items[i + 1];
-        }
+        if (size - 1 >= 0) System.arraycopy(items, 1, items, 0, size - 1);
         items[size - 1] = null;
         size--;
         shrink();
-        System.out.println(Arrays.toString(items));
         return popValue;
     }
 
@@ -50,7 +41,6 @@ public class ResizingArrayDeque<T> {
         items[size - 1] = null;
         size--;
         shrink();
-        System.out.println(Arrays.toString(items));
         return popValue;
     }
 
@@ -66,9 +56,7 @@ public class ResizingArrayDeque<T> {
         if (items.length / 4 >= size) {
             int newSize = items.length / 2;
             T[] newArray = (T[]) new Object[newSize];
-            for (int i = 0; i < size; i++) {
-                newArray[i] = items[i];
-            }
+            if (size >= 0) System.arraycopy(items, 0, newArray, 0, size);
             items = newArray;
         }
     }
@@ -77,9 +65,7 @@ public class ResizingArrayDeque<T> {
         if (size > items.length * 0.8) {
             int newSize = items.length + (int) Math.max((items.length * 0.5), 1);
             T[] newArray = (T[]) new Object[newSize];
-            for (int i = 0; i < size; i++) {
-                newArray[i] = items[i];
-            }
+            if (size >= 0) System.arraycopy(items, 0, newArray, 0, size);
             items = newArray;
         }
     }
