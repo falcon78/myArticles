@@ -27,12 +27,22 @@
 
 ## Planning
 
-- Write a task list!!!! Preferably during the previous day. When your mind has something to follow it will get easier to do that.
+- Write a task list!!!! Preferably during the previous day.
+When your mind has something to follow it will get easier to do that.
 
 - Also write a weekly task list if you can.
 
-- Do not study everything at one go! Take breaks or do something else (Go shopping or for a walk! Physical activity is good for you!)
+- Do not study everything at one go! Take breaks or do something else 
+(Go shopping or for a walk! Physical activity is good for you!)
 
-- Plan your quitting time!!! This helps you to have something to look forward to! And reward yourself after a long study session.
+- Plan your quitting time!!! This helps you to have something to look forward to!
+ And reward yourself after a long study session.
 
-- At the end of the day wrote a journal, reflecting on your studies or what you did throughout the day.
+- At the end of the day wrote a journal, reflecting on your studies or
+what you did throughout the day.
+
+## Remembering things
+
+- Spaced repetition. 
+- Try to associate what ever you are trying to learn with visual(funny) analogy.
+- 
