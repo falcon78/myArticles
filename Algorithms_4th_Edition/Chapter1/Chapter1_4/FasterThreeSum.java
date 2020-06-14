@@ -27,43 +27,43 @@ public class FasterThreeSum {
 
         for (int i = 0; i < arr.length; i++) {
 
-            int start = i + 1;
-            int end = arr.length - 1;
+            int left = i + 1;
+            int right = arr.length - 1;
 
-            while (start < end) {
-                int threeSum = arr[i] + arr[start] + arr[end];
+            while (left < right) {
+                int threeSum = arr[i] + arr[left] + arr[right];
                 if (threeSum < 0) {
-                    start++;
+                    left++;
                 } else if (threeSum > 0) {
-                    end--;
+                    right--;
                 } else {
 
-                    // if start and end are zero and threesum if also zero then it means
+                    // if left and right are zero and threesum if also zero then it means
                     // arr[i] is also zero.
                     // Since we already handled zeros, we ignore them
-                    if (arr[start] == 0 && arr[end] == 0) {
-                        start++;
-                        end--;
+                    if (arr[left] == 0 && arr[right] == 0) {
+                        left++;
+                        right--;
                         continue;
                     }
 
-                    int startValue = arr[start];
+                    int startValue = arr[left];
                     int startDuplicateCount = 1;
-                    while (start + 1 < end && arr[start + 1] == startValue) {
+                    while (left + 1 < right && arr[left + 1] == startValue) {
                         startDuplicateCount++;
-                        start++;
+                        left++;
                     }
 
-                    int endValue = arr[end];
+                    int endValue = arr[right];
                     int endDuplicateCount = 1;
-                    while (end - 1 > start && arr[end - 1] == endValue) {
+                    while (right - 1 > left && arr[right - 1] == endValue) {
                         endDuplicateCount++;
-                        end--;
+                        right--;
                     }
 
                     count += endDuplicateCount * startDuplicateCount;
-                    end--;
-                    start++;
+                    right--;
+                    left++;
                 }
             }
         }

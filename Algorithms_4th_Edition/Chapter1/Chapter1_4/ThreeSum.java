@@ -2,9 +2,6 @@ package Chapter1.Chapter1_4;
 
 import java.io.IOException;
 import java.math.BigInteger;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.List;
 
 public class ThreeSum {
     public static void main(String[] args) throws IOException {

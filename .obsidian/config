@@ -14,13 +14,13 @@
   "isRightSidedockCollapsed": false,
   "lastOpenSidebarTab": "File explorer",
   "workspaceLayout": {
-    "id": "38fd6f96400d2549",
+    "id": "e1fe9494a352198c",
     "type": "split",
     "dimension": null,
     "direction": "vertical",
     "children": [
       {
-        "id": "f9a33b49ee84e8df",
+        "id": "388bd27428cf8f16",
         "type": "leaf",
         "dimension": null,
         "active": true,
@@ -28,7 +28,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Algorithms_4th_Edition/Map.md.md",
+            "file": "Algorithms_4th_Edition/Chapter1/Chapter1_3/Notes.md",
             "mode": "source"
           }
         }
@@ -36,11 +36,13 @@
     ]
   },
   "lastOpenFiles": [
-    "Algorithms_4th_Edition/Untitled.md",
-    "java_out/production/myArticles/production/myArticles/Chapter1/Chapter1_1/Euclidean_Algorithm.md",
-    "java_out/production/myArticles/Chapter1/Chapter1_1/Euclidean_Algorithm.md",
+    "Algorithms_4th_Edition/Chapter1/Chapter1_3/Notes.md",
     "Algorithms_4th_Edition/Chapter1/Chapter1_1/Euclidean_Algorithm.md",
-    "GoLang/RandomGoNotes.md"
+    "java_out/production/myArticles/production/myArticles/production/myArticles/production/myArticles/production/myArticles/production/myArticles/production/myArticles/production/myArticles/Chapter1/Chapter1_1/Euclidean_Algorithm.md",
+    "Math/Algorithms/Algorithmn Basics.md",
+    "GoLang/Tour/1_Basic Syntax.md"
   ],
-  "lastOpenRightSidedockTab": "Backlinks"
+  "lastOpenRightSidedockTab": "Backlinks",
+  "alwaysUpdateLinks": false,
+  "vimMode": true
 }
