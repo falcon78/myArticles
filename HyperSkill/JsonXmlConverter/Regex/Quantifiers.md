@@ -43,4 +43,32 @@ String regex = "ab{4,}";
 "abbbb".matches(regex); // true
 "abbbbbbb".matches(regex); // true
 ```
+# Question
+There is a set of rules for identifiers (names) of variables:
 
+    It can include lower and upper letters, digits and the underscore character _;
+    It can only start with a letter or underscore;
+    If an identifier starts with the underscore, the second character must be a letter or digit, but not the underscore;
+
+```java
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int numberOfVariables = Integer.parseInt(scanner.nextLine());
+
+        String regex = "(^_{1,1}[a-zA-Z0-9]+)|^[a-zA-Z]+[0-9]*_{0,}.*";
+
+        for (int i = 0; i < numberOfVariables; i++) {
+            String identifier = scanner.nextLine();
+            if (!identifier.matches(regex)) {
+                System.out.println(identifier);
+            }
+        }
+    }
+}
+
+```

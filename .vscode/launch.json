@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - DoublingTest",
+            "request": "launch",
+            "mainClass": "Chapter1.Chapter1_4.DoublingTest",
+            "projectName": "myArticles_d0e2f8ff"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - QuickFind",
+            "request": "launch",
+            "mainClass": "Chapter1.Chapter1_5.QuickFind",
+            "projectName": "myArticles_d0e2f8ff",
+            "vmArgs": "-enableassertions"
+        },
+        {
+            "type": "java",
+            "name": "Run",
+            "request": "launch",
+            "mainClass": "Chapter1",
+            "projectName": "Algorithm",
+            "vmArgs": "-enableassertions"
+        }
+    ]
+}
