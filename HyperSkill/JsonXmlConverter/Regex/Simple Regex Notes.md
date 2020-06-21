@@ -1,5 +1,4 @@
 # Simple Regex Notes
-#java/hyperskill/regex #regex/java
 
 #### Simple Matching
 
@@ -79,7 +78,7 @@ String pattern = "(abc|def|xyz)"; // matches "abc", "def", "xyz", but not "a" or
 
 Escape character in java is `\\` not `\` like some other languages.
 
-#### Shorthands
+#### Shorthand**s
 
 `\\d`  any digit  `[0-9]`
 
