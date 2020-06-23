@@ -53,3 +53,9 @@
 ```math
 	\overline{z} = a-bi
 ```
+
+- Conjugate 
+	- $\overline{z_1+z_2} = \overline{z_1} + \overline{z_2}$
+	- $\overline{z_1z_2} = \overline{z_1} * \overline{z_2}$
+	- $\overline{z_1 / z_2} = \overline{z_1} / \overline{z_2}$
+

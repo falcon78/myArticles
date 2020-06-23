@@ -2,10 +2,19 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - QuickUnion",
+            "request": "launch",
+            "mainClass": "Chapter1.Chapter1_5.QuickUnion",
+            "projectName": "myArticles_d0e2f8ff",
+            "vmArgs": "-enableassertions"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - DoublingTest",
             "request": "launch",
             "mainClass": "Chapter1.Chapter1_4.DoublingTest",
-            "projectName": "myArticles_d0e2f8ff"
+            "projectName": "myArticles_d0e2f8ff",
+            "vmArgs": "-enableassertions"
         },
         {
             "type": "java",
