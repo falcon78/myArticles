@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- * The following class represents union-find data type. (Weighted Quick union
+ * The following class represents union-union data type. (Weighted Quick union
  * with path compression.)
  */
 public class QuickUnion {

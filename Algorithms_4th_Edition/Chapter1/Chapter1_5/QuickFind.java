@@ -3,6 +3,9 @@ package Chapter1.Chapter1_5;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * The following class represents union-find data type.
+ */
 public class QuickFind {
     private int[] id;
     int count;
