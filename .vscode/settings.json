@@ -1,7 +1,11 @@
 {
-    "cSpell.words": [
-        "Abser",
-        "println",
-        "struct"
-    ]
+  "editor.minimap.enabled": false,
+  "editor.fontLigatures": true,
+  "editor.wrappingIndent": "indent",
+  "editor.overviewRulerBorder": false,
+  "editor.lineHeight": 24,
+  "workbench.colorTheme": "Gruvbox Material Dark",
+  "[markdown]": {
+    "editor.quickSuggestions": true
+  }
 }

@@ -1,4 +1,5 @@
 # Quantifiers
+[[Regex.md]]
 
 * Quantifiers define how often a character can occur in a sequence.
 * It should be written after a regular or special character.
@@ -71,4 +72,3 @@ public class Main {
     }
 }
 
-```

@@ -1,3 +1,6 @@
+# Patterns and Matcher
+[[Regex.md]]
+
 # Packages
 
 - java.util.regex.Pattern
@@ -44,3 +47,7 @@ Matcher matcher = pattern.matcher(text);
 System.out.println(matcher.matches()); // false, must match whole string.
 System.out.println(matcher.find()); // true, substring match is sufficient.
 ```
+
+
+
+

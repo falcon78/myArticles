@@ -19,43 +19,35 @@
 
 - Additions
 
-```math {cmd}
-	(z_1 + z_2i) + (w_1 + w_2i) = (z_1 + w_1) + (z_2 + w _2)i
-```
+$$ (z_1 + z_2i) + (w_1 + w_2i) = (z_1 + w_1) + (z_2 + w _2)i $$
 
 - Subtraction
 
-```math {cmd}
-	(z_1 + z_2i) - (w_1 + w_2i) = (z_1 - w_1) + (z_2 - w _2)i
-```
+$$ (z_1 + z_2i) - (w_1 + w_2i) = (z_1 - w_1) + (z_2 - w _2)i $$
 
 - Multiplication
 
-```math
-	(z_1 + z_2i) * (w_1 + w_2i) = z_1 * (w_1 + w_2i) + z_2i * (w_1 + w_2i)
-```
+$$ (z_1 + z_2i) * (w_1 + w_2i) = z_1 * (w_1 + w_2i) + z_2i * (w_1 + w_2i) $$
 
 - Division (Rationalize)
 
-```math
-	\frac{(z_1 + z_2i)}{(w_1 + w_2i)} = \frac{(z_1 + z_2i)}{(w_1 + w_2i)} * \frac{w_1 - w_2i}{w_1 - w_2i}
-```
+$$ \frac{(z_1 + z_2i)}{(w_1 + w_2i)} = \frac{(z_1 + z_2i)}{(w_1 + w_2i)} * \frac{w_1 - w_2i}{w_1 - w_2i} $$
 
 - $Re(a+bi) = a$
 - $Im(a+bi) = b$
 
 - Conjugate $\overline{z}$
 
-```math
-	z = a+bi
-```
+$$ z = a+bi $$
 
-```math
-	\overline{z} = a-bi
-```
+$$ \overline{z} = a-bi $$
 
-- Conjugate 
+- Conjugate
+
 	- $\overline{z_1+z_2} = \overline{z_1} + \overline{z_2}$
 	- $\overline{z_1z_2} = \overline{z_1} * \overline{z_2}$
 	- $\overline{z_1 / z_2} = \overline{z_1} / \overline{z_2}$
+
+
+
 

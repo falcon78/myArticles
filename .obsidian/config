@@ -8,41 +8,108 @@
     "Backlinks": true,
     "Command palette": true,
     "Markdown format importer": true,
-    "Word count": true
+    "Word count": true,
+    "Tag pane": true,
+    "Page preview": true,
+    "Starred": true,
+    "Open with default app": true
   },
   "isSidebarCollapsed": false,
-  "isRightSidedockCollapsed": false,
+  "isRightSidedockCollapsed": true,
   "lastOpenSidebarTab": "File explorer",
   "workspaceLayout": {
     "id": "e1fe9494a352198c",
     "type": "split",
-    "dimension": null,
-    "direction": "vertical",
     "children": [
       {
-        "id": "388bd27428cf8f16",
+        "id": "d88b8654ebb82444",
         "type": "leaf",
-        "dimension": null,
         "active": true,
-        "master": "",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Algorithms_4th_Edition/Chapter1/Chapter1_3/Notes.md",
-            "mode": "source"
-          }
+          "type": "graph",
+          "state": {}
         }
       }
-    ]
+    ],
+    "direction": "vertical"
   },
   "lastOpenFiles": [
-    "Algorithms_4th_Edition/Chapter1/Chapter1_3/Notes.md",
-    "Algorithms_4th_Edition/Chapter1/Chapter1_1/Euclidean_Algorithm.md",
-    "java_out/production/myArticles/production/myArticles/production/myArticles/production/myArticles/production/myArticles/production/myArticles/production/myArticles/production/myArticles/Chapter1/Chapter1_1/Euclidean_Algorithm.md",
-    "Math/Algorithms/Algorithmn Basics.md",
-    "GoLang/Tour/1_Basic Syntax.md"
+    "Data Structures/Data Structures.md",
+    "Data Structures/Hash.md",
+    "Data Structures/Untitled.md",
+    "Data Structures/MemoryAlignment.md",
+    "CPU/uma_and_numa.md"
   ],
   "lastOpenRightSidedockTab": "Backlinks",
   "alwaysUpdateLinks": false,
-  "vimMode": true
+  "vimMode": true,
+  "leftSidedock": {
+    "id": "836d00e01071141b",
+    "type": "split",
+    "children": [
+      {
+        "id": "fdbce095534fb5b3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f3dde9d005280f38",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "091047d33120dccb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {}
+            }
+          },
+          {
+            "id": "fe45b11048de27bf",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "rightSidedock": {
+    "id": "868dc75319dc2c61",
+    "type": "split",
+    "children": [
+      {
+        "id": "d6b2651ef8af4e38",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "67dc5e9e069e2386",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {}
+            }
+          },
+          {
+            "id": "046c088fba20e782",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  }
 }

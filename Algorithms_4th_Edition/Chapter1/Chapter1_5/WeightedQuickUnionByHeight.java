@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 /**
  * Exercise 1.5.14
- * Implementation of quick-union data type. (Weighted Quick Union (height instead of node count.))
+ * Implementation of quick-union data type. (Weighted Quick Union (ranked by height instead of node count.))
  */
 public class WeightedQuickUnionByHeight {
     private int[] sites;

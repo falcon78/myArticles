@@ -2,6 +2,21 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - logarithm",
+            "request": "launch",
+            "mainClass": "Chapter1.Chapter1_1.logarithm",
+            "projectName": "myArticles_d0e2f8ff"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - WeightedQuickUnionByHeight",
+            "request": "launch",
+            "mainClass": "Chapter1.Chapter1_5.WeightedQuickUnionByHeight",
+            "projectName": "myArticles_d0e2f8ff",
+            "vmArgs": "-enableassertions"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - QuickUnion",
             "request": "launch",
             "mainClass": "Chapter1.Chapter1_5.QuickUnion",

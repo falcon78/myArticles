@@ -32,3 +32,4 @@
     - Components of a square wave
     
       ![](images/components_of_square_wave.png)
+
