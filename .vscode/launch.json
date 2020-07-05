@@ -5,6 +5,13 @@
             "name": "CodeLens (Launch) - SortComparison",
             "request": "launch",
             "mainClass": "Chapter2.Chapter2_1.SortComparison",
+            "projectName": "myArticles_d8cf4b16"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SortComparison",
+            "request": "launch",
+            "mainClass": "Chapter2.Chapter2_1.SortComparison",
             "projectName": "myArticles_d0e2f8ff"
         },
         {

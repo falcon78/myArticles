@@ -6,6 +6,10 @@
 - java.util.regex.Pattern
 - java.util.regex.Matcher
 
+# Regex match until
+- Match until a.
+    - `.+?(?=a)`
+
 # Matching a regex
 
 ```java
@@ -47,7 +51,3 @@ Matcher matcher = pattern.matcher(text);
 System.out.println(matcher.matches()); // false, must match whole string.
 System.out.println(matcher.find()); // true, substring match is sufficient.
 ```
-
-
-
-

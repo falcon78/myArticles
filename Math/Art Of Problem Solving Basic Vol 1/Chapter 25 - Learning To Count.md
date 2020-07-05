@@ -18,3 +18,26 @@
 - How many four letter 'words' are there with vowels in the middle two places and a consonant at the end? 
 	- $(26 choices) * (5 choices) * (5 choices) * (21 choices) = 13650$ ways.
 
+## Example: The Number of Divisors
+
+- Finding how many divisors a certain number has. 
+	- (We will use 540 as an example.)
+	- First find prime factorization of the number
+    	- 540 = $2^2*3^3*5$
+	- Thus all divisors  of 540 must be of form $2^a*3^b*5^c$
+	- Since our choices of $a, b, c$ are **Independent** there are $(3)(4)(2)$ = 24 factors of 540.
+	- The general formula is: 
+	  $$\large{n = p_1^{e1}*p_2^{e2}...p_k^{ek}}$$
+	  $$\text{Factors of N} = (e^1+1) * (e^2 + 1) * ... * (e^k+1)$$
+
+## Restrictions on Multiplication
+
+- If the actions are not **Independent** then the Multiplication methods starts to break down.
+
+## Permutations, Arrangements, and !
+
+- Permutations
+  - $_nP_k$jdfkj= $\dfrac{n!}{(n-k)!}$
+  - Finding trailing zeros in end of a factorial.
+    $$\large{f(n) = \sum_{i=1}^{k} \lfloor{\frac{n}{5^i}{}}\rfloor}$$
+	$$\text{where k} = \lfloor{\log_5{n}}\rfloor$$
