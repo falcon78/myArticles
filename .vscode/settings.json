@@ -7,5 +7,6 @@
   "workbench.colorTheme": "Gruvbox Material Dark",
   "[markdown]": {
     "editor.quickSuggestions": true
-  }
+  },
+  "C_Cpp.intelliSenseEngineFallback": "Enabled"
 }
