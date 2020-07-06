@@ -79,7 +79,7 @@ String pattern = "(abc|def|xyz)"; // matches "abc", "def", "xyz", but not "a" or
 
 Escape character in java is `\\` not `\` like some other languages.
 
-#### Shorthand**s
+#### **Shorthand**
 
 `\\d`  any digit  `[0-9]`
 

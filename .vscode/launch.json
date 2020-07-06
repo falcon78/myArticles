@@ -2,17 +2,27 @@
     "configurations": [
         {
             "type": "java",
-            "name": "CodeLens (Launch) - SortComparison",
+            "name": "CodeLens (Launch) - MergeSort",
             "request": "launch",
-            "mainClass": "Chapter2.Chapter2_1.SortComparison",
-            "projectName": "myArticles_d8cf4b16"
+            "mainClass": "Chapter2.Chapter2_2.MergeSort",
+            "projectName": "myArticles_d8cf4b16",
+            "vmArgs": "-enableassertions"
         },
         {
             "type": "java",
             "name": "CodeLens (Launch) - SortComparison",
             "request": "launch",
             "mainClass": "Chapter2.Chapter2_1.SortComparison",
-            "projectName": "myArticles_d0e2f8ff"
+            "projectName": "myArticles_d8cf4b16",
+            "vmArgs": "-enableassertions"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SortComparison",
+            "request": "launch",
+            "mainClass": "Chapter2.Chapter2_1.SortComparison",
+            "projectName": "myArticles_d0e2f8ff",
+            "vmArgs": "-enableassertions"
         },
         {
             "type": "java",

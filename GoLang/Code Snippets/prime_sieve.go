@@ -18,14 +18,22 @@ func Filter(in <-chan int, out chan<- int, prime int) {
 	}
 }
 
-func main() {
+func PrimeSieve(N int) []int {
+	var primes []int
 	src := make(chan int)
 	go Generate(src)
-	for i := 0; i < 10; i++ {
+
+	for i := 0; i < N; i++ {
 		prime := <-src
-		println(prime)
+		primes = append(primes, prime)
 		dst := make(chan int)
 		go Filter(src, dst, prime)
 		src = dst
 	}
+
+	return primes
+}
+
+func main() {
+	PrimeSieve(10)
 }

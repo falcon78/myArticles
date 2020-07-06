@@ -22,7 +22,7 @@ print(sum)
 
 # Recursion Factorial
 
-```python {cmd}
+```python
 def ln(n):
     if (n == 1 or n == 0):
         return 1
