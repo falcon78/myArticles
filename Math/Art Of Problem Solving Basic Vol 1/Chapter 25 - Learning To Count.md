@@ -48,9 +48,11 @@
 
   - How many possible ways are there to lay things in a **circle**.
     - Unlike lines, with objects arranged in circle the rotation doesn't matter.
-    - $\dfrac{n!}{n-1} = (n-1)!$
+    - $\dfrac{n!}{n} = (n-1)!$
 
   - How many possible ways are there to lay things in a **bracelet**.
+    - You have to divide by an extra factor of two, since both rotation and flipped over companion are indistinguishable.
+      - $\dfrac{n!}{n} * \dfrac{1}{2} = \dfrac{(n-1)!}{2}$
 
 - Finding trailing zeros in end of a factorial.
   $$\large{f(n) = \sum_{i=1}^{k} \lfloor{\frac{n}{5^i}{}}\rfloor}$$

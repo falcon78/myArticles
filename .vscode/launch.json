@@ -2,6 +2,29 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - FarthestPair",
+            "request": "launch",
+            "mainClass": "Chapter1.Chapter1_4.FarthestPair",
+            "projectName": "myArticles_d8cf4b16"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ArrayAccessTest",
+            "request": "launch",
+            "mainClass": "Chapter2.Chapter2_2.ArrayAccessTest",
+            "projectName": "myArticles_d8cf4b16",
+            "vmArgs": "-enableassertions"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MergeSortBottomUp",
+            "request": "launch",
+            "mainClass": "Chapter2.Chapter2_2.MergeSortBottomUp",
+            "projectName": "myArticles_d8cf4b16",
+            "vmArgs": "-enableassertions"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - MergeSort",
             "request": "launch",
             "mainClass": "Chapter2.Chapter2_2.MergeSort",
