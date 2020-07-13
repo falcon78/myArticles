@@ -5,7 +5,8 @@
             "name": "CodeLens (Launch) - FarthestPair",
             "request": "launch",
             "mainClass": "Chapter1.Chapter1_4.FarthestPair",
-            "projectName": "myArticles_d8cf4b16"
+            "projectName": "myArticles_d8cf4b16",
+            "vmArgs": "-enableassertions"
         },
         {
             "type": "java",

@@ -22,10 +22,8 @@ public class MergeSort extends BaseSort {
 
         int i = lo, j = mid + 1;
 
-        /**
-         *  Copy elements to auxiliary array.
-         *  TODO: Optimize this code to remove array copy. (Exercise 2.2.11)
-         */
+        // Copy elements to auxiliary array.
+        // TODO: Optimize this code to remove array copy. (Exercise 2.2.11)
         for (int k = lo; k <= hi; k++) {
             aux[k] = c[k];
             arrayAccessCount += 2;
@@ -76,7 +74,7 @@ public class MergeSort extends BaseSort {
         for (int i = lo + 1; i <= hi; i++) {
             Comparable key = a[i];
             int j = i;
-            
+
             arrayAccessCount += 2;
             while (j > lo && less(key, a[j - 1])) {
                 a[j] = a[j - 1];

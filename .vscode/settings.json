@@ -3,7 +3,6 @@
   "editor.fontLigatures": true,
   "editor.wrappingIndent": "indent",
   "editor.overviewRulerBorder": false,
-  "workbench.colorTheme": "Gruvbox Material Dark",
   "[markdown]": {
     "editor.quickSuggestions": true
   },
