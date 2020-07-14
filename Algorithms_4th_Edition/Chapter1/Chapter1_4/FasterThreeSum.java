@@ -22,7 +22,7 @@ public class FasterThreeSum {
 
         int zeroCount = zeroCount(arr);
         // Number of possible ways you can combine zeros
-        // Delete duplicate count by using combination formula.
+        // Count zeros by using combination formula.
         // nCk (In this case n is the number of zeros(zeroCount) and k is 3)
         int count = ((zeroCount - 2) * (zeroCount - 1) * zeroCount) / 6;
 
