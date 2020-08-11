@@ -78,8 +78,22 @@ public class BaseSort {
     protected static Comparable[] unsortedArray(int N) {
         Comparable[] arr = new Comparable[N];
         for (int i = 0; i < N; i++) {
-            arr[i] = StdRandom.uniform(0, 99999);
+            arr[i] = StdRandom.uniform(0, 10);
         }
         return arr;
+    }
+
+    /**
+     *  Shuffles array in place.
+     *
+     * @param arr Array to shuffle. 
+     */
+    public static void Shuffle(Comparable[] arr) {
+        for (int i = arr.length - 1; i > 0; i--) {
+            int randomIndex = StdRandom.uniform(0, i);
+            Comparable temp = arr[randomIndex];
+            arr[randomIndex] = arr[i];
+            arr[i] = temp;
+        }
     }
 }

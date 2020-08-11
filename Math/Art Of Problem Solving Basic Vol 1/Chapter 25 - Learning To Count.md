@@ -45,7 +45,6 @@
 - P: Number of permutations.
 - n: Total number of objects in the set.
 - k: Number of choosing objects from the set.
-
   - Example: In how many ways can a row of k seats be filled from a set of n people.
 
 - How many possible ways are there to lay things in a **circle**.

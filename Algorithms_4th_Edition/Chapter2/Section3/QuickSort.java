@@ -5,7 +5,9 @@ import Chapter2.Section1.BaseSort;
 public class QuickSort extends BaseSort {
 
     public static void main(String[] args) {
-        sort(unsortedArray(1000));
+        for (int i = 0; i < 100; i++)
+            sort(unsortedArray(10000));
+            
         sort(new Comparable[]{
                 10, 1, 2, 3, -1, -1, -1, 36
         });
@@ -48,6 +50,7 @@ public class QuickSort extends BaseSort {
     }
 
     public static void sort(Comparable[] a) {
+        Shuffle(a);
         sort(a, 0, a.length - 1);
         assert isSorted(a);
     }

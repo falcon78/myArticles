@@ -2,6 +2,22 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ThreeWayQuickSort",
+            "request": "launch",
+            "mainClass": "Chapter2.Section3.ThreeWayQuickSort",
+            "projectName": "myArticles_619185bf",
+            "vmArgs": "-enableassertions"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - QuickSort",
+            "request": "launch",
+            "mainClass": "Chapter2.Section3.QuickSort",
+            "projectName": "myArticles_619185bf",
+            "vmArgs": "-enableassertions"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - NaturalMergeSort",
             "request": "launch",
             "mainClass": "Chapter2.Chapter2_2.NaturalMergeSort",
