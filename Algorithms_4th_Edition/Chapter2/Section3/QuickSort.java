@@ -27,7 +27,7 @@ public class QuickSort extends BaseSort {
                     break;
             }
             while (less(pivotValue, a[--j])) {
-                if (j <= lo)
+                if (j <= lo || j < i)
                     break;
             }
 
