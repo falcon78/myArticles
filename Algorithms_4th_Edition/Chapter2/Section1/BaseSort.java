@@ -78,7 +78,7 @@ public class BaseSort {
     protected static Comparable[] unsortedArray(int N) {
         Comparable[] arr = new Comparable[N];
         for (int i = 0; i < N; i++) {
-            arr[i] = StdRandom.uniform(0, 10);
+            arr[i] = StdRandom.uniform();
         }
         return arr;
     }

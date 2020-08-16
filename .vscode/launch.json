@@ -2,6 +2,21 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ShellSort",
+            "request": "launch",
+            "mainClass": "Chapter2.Section1.ShellSort",
+            "projectName": "myArticles_619185bf"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - NutsAndBolts",
+            "request": "launch",
+            "mainClass": "Chapter2.Section3.NutsAndBolts",
+            "projectName": "myArticles_619185bf",
+            "vmArgs": "-enableassertions"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - ThreeWayQuickSort",
             "request": "launch",
             "mainClass": "Chapter2.Section3.ThreeWayQuickSort",

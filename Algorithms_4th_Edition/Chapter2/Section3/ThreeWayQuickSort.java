@@ -36,5 +36,4 @@ public class ThreeWayQuickSort extends BaseSort {
         sort(a, lo, left - 1);
         sort(a, right + 1, hi);
     }
-
 }

@@ -2,7 +2,7 @@ package Chapter2.Section1;
 
 public class ShellSort extends BaseSort{
     public static void main(String[] args) {
-        sort(unsortedArray(1000));
+        sort(unsortedArray(1000000));
     }
 
     public static Comparable[] sort(Comparable[] arr) {

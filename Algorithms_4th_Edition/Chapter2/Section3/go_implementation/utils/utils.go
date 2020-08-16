@@ -46,7 +46,7 @@ func UnsortedSlice(N int) []int {
 // ShuffleArray Randomly shuffle array with Knuth Shuffle algorithm.
 func ShuffleArray(arr []int) {
 	for i := len(arr) - 1; i > 0; i-- {
-		randomIndex := rand.Intn(i + 1)
+		randomIndex := rand.Intn(i)
 		temp := arr[randomIndex]
 		arr[randomIndex] = arr[i]
 		arr[i] = temp
