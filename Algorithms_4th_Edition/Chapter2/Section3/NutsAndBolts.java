@@ -1,5 +1,16 @@
 package Chapter2.Section3;
 
+/**
+ * Exercise 2.3.15
+ * 
+ * You have a mixed pile of N nuts and N bolts and need to quickly ﬁnd the 
+ * corresponding pairs of nuts and bolts.
+ * Each nut matches exactly one bolt, and each bolt matches exactly one nut. 
+ * By ﬁtting a nut and bolt together, you can see which is bigger, but it is 
+ * not possible to directly compare two nuts or two bolts.
+ * 
+ * Give an efﬁcient method for solving the problem.
+ */
 public class NutsAndBolts {
     public static void main(String[] args) {
         for (int i = 0; i < 1000; i++) {
@@ -7,17 +18,14 @@ public class NutsAndBolts {
             int[] bolts = new int[nuts.length];
             System.arraycopy(nuts, 0, bolts, 0, nuts.length);
 
-            arrayShuffle(nuts);
-            arrayShuffle(bolts);
-
-            sort(nuts, bolts);
-
             assert isSorted(nuts);
             assert isSorted(bolts);
         }
     }
 
     static void sort(int[] nuts, int[] bolts) {
+        arrayShuffle(nuts);
+        arrayShuffle(bolts);
         sort(nuts, bolts, 0, nuts.length - 1);
     }
 

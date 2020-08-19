@@ -2,16 +2,21 @@ package Chapter2.Section3;
 
 import Chapter2.Section1.BaseSort;
 
-public class ThreeWayQuickSort extends BaseSort {
+/**
+ * Quicksort implementation with three way partition.
+ * Three way partition method is efficient if there are lots of duplicate items in array.
+ */
+public class ThreeWayQuickSort extends BaseSort implements ISorter {
     public static void main(String[] args) {
+        ThreeWayQuickSort sort = new ThreeWayQuickSort();
         for (int i = 0; i < 100; i++)
-            sort(unsortedArray(10000));
-        sort(new Comparable[]{0});
-        sort(new Comparable[]{});
-        sort(new Comparable[]{1,1,1,1,1,1,1,1,2});
+            sort.sort(unsortedArray(10000));
+        sort.sort(new Comparable[] { 0 });
+        sort.sort(new Comparable[] {});
+        sort.sort(new Comparable[] { 1, 1, 1, 1, 1, 1, 1, 1, 2 });
     }
 
-    public static void sort(Comparable[] a) {
+    public void sort(Comparable[] a) {
         sort(a, 0, a.length - 1);
         assert isSorted(a);
     }

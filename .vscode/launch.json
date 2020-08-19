@@ -2,10 +2,58 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ThreeWayQuickSortBentley",
+            "request": "launch",
+            "mainClass": "Chapter2.Section3.ThreeWayQuickSortBentley",
+            "projectName": "myArticles_d8cf4b16"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - IterativeQuickSort",
+            "request": "launch",
+            "mainClass": "Chapter2.Section3.IterativeQuickSort",
+            "projectName": "myArticles_d8cf4b16",
+            "vmArgs": "-enableassertions"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - NutsAndBolts",
+            "request": "launch",
+            "mainClass": "Chapter2.Section3.NutsAndBolts",
+            "projectName": "myArticles_d8cf4b16",
+            "vmArgs": "-enableassertions"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MedianOfThreeQuickSort",
+            "request": "launch",
+            "mainClass": "Chapter2.Section3.MedianOfThreeQuickSort",
+            "projectName": "myArticles_d8cf4b16",
+            "vmArgs": "-enableassertions"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - DoublingTestQuickSort",
+            "request": "launch",
+            "mainClass": "Chapter2.Section3.DoublingTestQuickSort",
+            "projectName": "myArticles_d8cf4b16",
+            "vmArgs": "-enableassertions"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - QuickSort",
+            "request": "launch",
+            "mainClass": "Chapter2.Section3.QuickSort",
+            "projectName": "myArticles_d8cf4b16",
+            "vmArgs": "-enableassertions"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - ShellSort",
             "request": "launch",
             "mainClass": "Chapter2.Section1.ShellSort",
-            "projectName": "myArticles_619185bf"
+            "projectName": "myArticles_619185bf",
+            "vmArgs": "-enableassertions"
         },
         {
             "type": "java",

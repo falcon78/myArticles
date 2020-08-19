@@ -76,17 +76,32 @@ public class BaseSort {
      * @return Unsorted array with N elements.
      */
     protected static Comparable[] unsortedArray(int N) {
+        return unsortedArray(N, 1000000);
+    }
+
+    /**
+     * Returns unsorted array with N elements.
+     *
+     * @param N        Size of array.
+     * @param maxValue maximum value of each element
+     * @return Unsorted array with N elements.
+     */
+    protected static Comparable[] unsortedArray(int N, int maxValue) {
         Comparable[] arr = new Comparable[N];
         for (int i = 0; i < N; i++) {
-            arr[i] = StdRandom.uniform();
+            if (StdRandom.bernoulli()) {
+                arr[i] = -StdRandom.uniform(maxValue);
+            } else {
+                arr[i] = StdRandom.uniform(maxValue);
+            }
         }
         return arr;
     }
 
     /**
-     *  Shuffles array in place.
+     * Shuffles array in place.
      *
-     * @param arr Array to shuffle. 
+     * @param arr Array to shuffle.
      */
     public static void Shuffle(Comparable[] arr) {
         for (int i = arr.length - 1; i > 0; i--) {
