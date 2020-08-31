@@ -71,3 +71,4 @@
 - $\begin{pmatrix} 8\\ 5\\ \end{pmatrix}$ = $\begin{pmatrix} 8\\ 3\\ \end{pmatrix}$
 - Generally
   - $\begin{pmatrix} n\\ k\\ \end{pmatrix}$ = $\begin{pmatrix} n\\ n-k\\ \end{pmatrix}$
+    - Choosing `k` thing is the same as choosing `n - k` things we don't want.

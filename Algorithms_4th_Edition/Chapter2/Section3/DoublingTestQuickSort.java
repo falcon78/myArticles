@@ -19,7 +19,7 @@ public class DoublingTestQuickSort extends BaseSort {
         benchmark("Three way partition quicksort \n", threeWayPartition);
         benchmark("Median of three quicksort \n", medianOfThree);
         benchmark("iterative quicksort \n", iterativeQuickSort);
-        benchmark("Bentley Mcllory 3 way partitioning \n", bentleyMcllroy);
+        benchmark("Bentley Mcllory + Turkey Ninther \n", bentleyMcllroy);
     }
 
     public static void benchmark(String name, ISorter Sort) {

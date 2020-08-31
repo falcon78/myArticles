@@ -1,5 +1,8 @@
 package Chapter2.Section1;
 
+/**
+ * Compares performance of various sort methods.
+ */
 public class SortComparison {
     public static final String insertionSort = "insertionSort";
     public static final String shellSort = "shellSort";
