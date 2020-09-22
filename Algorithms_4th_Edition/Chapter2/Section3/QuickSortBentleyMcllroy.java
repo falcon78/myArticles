@@ -65,7 +65,7 @@ public class QuickSortBentleyMcllroy extends BaseSort implements ISorter {
             }
         }
 
-        // in-case pointers do cross
+        // in-case pointers overlap
         i = j + 1;
 
         for (int left = lo; left <= leftEqual; left++) {

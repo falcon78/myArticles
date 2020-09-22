@@ -2,17 +2,18 @@ package main
 
 import (
 	"algorithms/quicksort/utils"
+	"math/rand"
 )
 
 const (
 	size = 10000
 	// N is number of test trails
-	N = 100
+	N = 1000
 )
 
 func main() {
 	for i := 0; i < N; i++ {
-		arr := utils.UnsortedSlice(size)
+		arr := utils.UnsortedSlice(rand.Intn(size))
 		QuickSort(arr)
 		utils.CheckIsSorted(arr)
 	}
@@ -40,23 +41,29 @@ func _QuickSort(a []int) {
 }
 
 func partition(a []int) int {
-	pivotValue := a[0]
+	pivot := a[0]
 	i := 0
-	j := len(a) - 1
+	j := len(a)
 
 	for {
-		for i <= len(a)-1 && pivotValue >= a[i] {
+		for i < len(a)-1 {
 			i++
-		}
-		for j >= 0 && pivotValue <= a[j] {
-			if j < i {
+			if a[i] >= pivot {
 				break
 			}
-			j--
 		}
+
+		for j > 0 {
+			j--
+			if a[j] <= pivot {
+				break
+			}
+		}
+
 		if j <= i {
 			break
 		}
+
 		utils.Swap(a, i, j)
 	}
 	utils.Swap(a, 0, j)

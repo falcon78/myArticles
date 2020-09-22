@@ -5,8 +5,6 @@ import (
 )
 
 const (
-	// N number of trails
-	N = 100
 	// SIZE size of each array
 	SIZE = 10000
 )
