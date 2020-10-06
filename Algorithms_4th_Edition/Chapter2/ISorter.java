@@ -1,4 +1,4 @@
-package Chapter2.Section3;
+package Chapter2;
 
 public interface ISorter {
     public void sort(Comparable[] arr);

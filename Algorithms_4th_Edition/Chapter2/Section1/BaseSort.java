@@ -1,8 +1,8 @@
 package Chapter2.Section1;
 
-import java.util.Arrays;
-
 import Library.StdRandom;
+
+import java.util.Arrays;
 
 public class BaseSort {
     /**

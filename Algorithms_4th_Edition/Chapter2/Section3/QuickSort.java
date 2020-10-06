@@ -1,6 +1,7 @@
 package Chapter2.Section3;
 
 import Chapter2.Section1.BaseSort;
+import Chapter2.ISorter;
 
 public class QuickSort extends BaseSort implements ISorter {
 

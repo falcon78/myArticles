@@ -15,6 +15,15 @@ public class MinPriorityQueue<T extends Comparable<T>> {
         for (int i = 0; i < 20; i++) {
             System.out.println(pq.removeMin());
         }
+
+        MinPriorityQueue<String> strpq = new MinPriorityQueue<>(0);
+        for (int i = 0; i < 20; i++) {
+            int random = StdRandom.uniform(65, 91);
+            strpq.insert(new String(Character.toChars(random)));
+        }
+        for (int i = 0; i < 20; i++) {
+            System.out.println(strpq.removeMin());
+        }
     }
 
     public MinPriorityQueue(int size) {

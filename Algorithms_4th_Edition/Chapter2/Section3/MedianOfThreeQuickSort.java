@@ -1,5 +1,6 @@
 package Chapter2.Section3;
 
+import Chapter2.ISorter;
 import Chapter2.Section1.BaseSort;
 
 /**
