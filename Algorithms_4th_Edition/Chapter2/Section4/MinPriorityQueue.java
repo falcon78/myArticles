@@ -2,36 +2,53 @@ package Chapter2.Section4;
 
 import Library.StdRandom;
 
+/**
+ * Implementation of min-priority queue using binary heap.
+ *
+ * @param <T> - Type of elements of priority queue.
+ */
 public class MinPriorityQueue<T extends Comparable<T>> {
-    private T[] pq;
-    private int N = 1;
+    boolean dynamicSize;
+    protected T[] pq;
+    protected int N = 1;
 
-    public static void main(String[] args) {
-        MinPriorityQueue<Integer> pq = new MinPriorityQueue<>(0);
+    public static void main(String[] args) throws Exception {
+        MinPriorityQueue<Integer> pq = new MinPriorityQueue<>();
         for (int i = 0; i < 20; i++) {
             int random = StdRandom.uniform(100);
             pq.insert(random);
         }
+        assert HeapUtils.verifyMinHeap(pq.pq, pq.N);
+
         for (int i = 0; i < 20; i++) {
             System.out.println(pq.removeMin());
         }
 
-        MinPriorityQueue<String> strpq = new MinPriorityQueue<>(0);
+        MinPriorityQueue<String> strpq = new MinPriorityQueue<>();
         for (int i = 0; i < 20; i++) {
             int random = StdRandom.uniform(65, 91);
             strpq.insert(new String(Character.toChars(random)));
         }
+        assert HeapUtils.verifyMinHeap(pq.pq, pq.N);
+
         for (int i = 0; i < 20; i++) {
             System.out.println(strpq.removeMin());
         }
     }
 
     public MinPriorityQueue(int size) {
+        dynamicSize = false;
         pq = (T[]) new Comparable[size + 1];
     }
 
-    public void insert(T item) {
+    public MinPriorityQueue() {
+        dynamicSize = true;
+        pq = (T[]) new Comparable[10];
+    }
+
+    public void insert(T item) throws Exception {
         expand();
+        if (isFull()) throw new Exception("Priority queue full");
         pq[N++] = item;
         swim(N - 1);
     }
@@ -50,7 +67,7 @@ public class MinPriorityQueue<T extends Comparable<T>> {
         return removedItem;
     }
 
-    public void sink(int currentParent) {
+    protected void sink(int currentParent) {
         if (currentParent < 1) {
             return;
         }
@@ -73,7 +90,7 @@ public class MinPriorityQueue<T extends Comparable<T>> {
         }
     }
 
-    public void swim(int currentNode) {
+    protected void swim(int currentNode) {
         if (currentNode < 1) {
             return;
         }
@@ -89,12 +106,21 @@ public class MinPriorityQueue<T extends Comparable<T>> {
         }
     }
 
-    public boolean isEmpty() {
+    protected boolean isEmpty() {
         return N == 1;
     }
 
+    public boolean isFull() {
+        return N == pq.length;
+    }
 
-    private void shrink() {
+    public int size() {
+        return N - 1;
+    }
+
+
+    protected void shrink() {
+        if (!dynamicSize) return;
         if ((pq.length / 2) < N) {
             return;
         }
@@ -105,7 +131,8 @@ public class MinPriorityQueue<T extends Comparable<T>> {
         pq = newArray;
     }
 
-    private void expand() {
+    protected void expand() {
+        if (!dynamicSize) return;
         if (pq.length > N + 2) {
             return;
         }
@@ -116,7 +143,7 @@ public class MinPriorityQueue<T extends Comparable<T>> {
         pq = newArray;
     }
 
-    private void swap(int a, int b) {
+    protected void swap(int a, int b) {
         T temp = pq[a];
         pq[a] = pq[b];
         pq[b] = temp;
@@ -129,7 +156,7 @@ public class MinPriorityQueue<T extends Comparable<T>> {
      * @param b - index of item to compare
      * @return true if a is smaller than b, otherwise return false
      */
-    private boolean less(int a, int b) {
+    protected boolean less(int a, int b) {
         return pq[a].compareTo(pq[b]) < 0;
     }
 }
