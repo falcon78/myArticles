@@ -11,39 +11,37 @@ public class MaxPriorityQueue<T extends Comparable<T>> extends MinPriorityQueue<
     public MaxPriorityQueue(int size) {
         super(size);
     }
+
     public MaxPriorityQueue() {
         super();
     }
 
     // tests
     public static void main(String[] args) throws Exception {
+        int N = 100;
         MaxPriorityQueue<Integer> mpq = new MaxPriorityQueue<>();
 
-        for (int i = 0; i < 20; i++) {
-            int random = StdRandom.uniform(100);
+        for (int i = 0; i < N; i++) {
+            int random = StdRandom.uniform(Integer.MAX_VALUE);
             mpq.insert(random);
         }
         assert HeapUtils.verifyMaxHeap(mpq.pq, mpq.N);
 
-        for (int i = 0; i < 20; i++) {
-            System.out.println(mpq.removeMax());
+        for (int i = 0; i < N; i++) {
+            mpq.removeMax();
+            assert HeapUtils.verifyMaxHeap(mpq.pq, mpq.N);
         }
 
-        for (int i = 0; i < 2000; i++) {
-            int random = StdRandom.uniform(100);
-            mpq.insert(random);
-        }
-        assert HeapUtils.verifyMaxHeap(mpq.pq, mpq.N);
-
-        MaxPriorityQueue<String> strpq = new MaxPriorityQueue<>();
-        for (int i = 0; i < 20; i++) {
+        MaxPriorityQueue<String> str_mpq = new MaxPriorityQueue<>();
+        for (int i = 0; i < N; i++) {
             int random = StdRandom.uniform(65, 91);
-            strpq.insert(new String(Character.toChars(random)));
+            str_mpq.insert(new String(Character.toChars(random)));
         }
         assert HeapUtils.verifyMaxHeap(mpq.pq, mpq.N);
 
-        for (int i = 0; i < 20; i++) {
-            System.out.println(strpq.removeMax());
+        for (int i = 0; i < N; i++) {
+            str_mpq.removeMax();
+            assert HeapUtils.verifyMaxHeap(mpq.pq, mpq.N);
         }
     }
 

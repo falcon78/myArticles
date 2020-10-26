@@ -121,7 +121,7 @@ public class MinPriorityQueue<T extends Comparable<T>> {
 
     protected void shrink() {
         if (!dynamicSize) return;
-        if ((pq.length / 2) < N) {
+        if ((pq.length / 4) < N) {
             return;
         }
 

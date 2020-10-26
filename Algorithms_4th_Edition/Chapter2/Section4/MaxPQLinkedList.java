@@ -131,6 +131,7 @@ public class MaxPQLinkedList<T extends Comparable<T>> {
         }
     }
 
+
     void swap(Node a, Node b) {
         T temp = a.value;
         a.value = b.value;
