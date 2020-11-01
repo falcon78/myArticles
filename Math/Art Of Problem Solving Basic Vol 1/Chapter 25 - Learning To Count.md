@@ -12,14 +12,11 @@
 
 - Number of ways six coins come up when flipped. (**Independent**)
 
-  - Possibility: 2 #(Heads or tails)
-  - Number of coins 6
-  - $2^6 = 64$ ways.
+  - Possibility with one coin: 2 #(Heads or tails)
+  - With six coins:  $2^6 = 64$ ways.
   - ($a^b$ where a #a is number of possibilities and #b is trial count.)
-  - > Each **independent** contributor adds a factor of its number of possibilities to the overall product.
+  -  Each **independent** contributor adds a factor of its number of possibilities to the overall product.
 
-- How many four letter 'words' are there with vowels in the middle two places and a consonant at the end?
-  - $(26 choices) *(5 choices)* (5 choices) * (21 choices) = 13650$ ways.
 
 ## Example: The Number of Divisors
 
@@ -32,6 +29,7 @@
   - The general formula is:
     - $$\large{n = p_1^{e1}*p_2^{e2}...p_k^{ek}}$$
     - $$\text{Factors of N} = (e^1+1) *(e^2 + 1)* ... * (e^k+1)$$
+  - The number of divisors of positive integer is often denoted $d(n)$
 
 ## Restrictions on Multiplication
 

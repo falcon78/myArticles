@@ -1,0 +1,88 @@
+{
+  "main": {
+    "id": "3e8660ead854c582",
+    "type": "split",
+    "children": [
+      {
+        "id": "33edb8ffb3b621ca",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Personal Notes/Fighting Procrastination.md",
+            "mode": "preview"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "cb82279d00db9aff",
+    "type": "split",
+    "children": [
+      {
+        "id": "2d169a9e675f80b3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c52d97e13cb23e70",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "077c4456cfcdc7f1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": ""
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "281623b15edfdca6",
+    "type": "split",
+    "children": [
+      {
+        "id": "fb6afa66d6590f80",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ccdc76ebd39a39d9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Personal Notes/Fighting Procrastination.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "lastOpenFiles": [
+    "Personal Notes/Fighting Procrastination.md",
+    "Python/Sanic/basics.md",
+    "Python/Sanic/testing.md",
+    "Math/Art Of Problem Solving Basic Vol 1/Chapter 25 - Questions.md",
+    "Math/Art Of Problem Solving Basic Vol 1/Chapter 25 - Learning To Count.md",
+    "HyperSkill/JsonXmlConverter/Collections/Collections.md",
+    "Math/Art Of Problem Solving Basic Vol 1/Chapter 2 - Complex Numbers.md",
+    "HyperSkill/JsonXmlConverter/Collections/sets.md"
+  ]
+}
