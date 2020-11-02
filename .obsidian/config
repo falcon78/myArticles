@@ -9,6 +9,12 @@
     "backlink": true,
     "command-palette": true,
     "markdown-importer": true,
-    "word-count": true
-  }
+    "word-count": true,
+    "custom-css": false,
+    "starred": true,
+    "random-note": true,
+    "translucency": false,
+    "templates": true
+  },
+  "vimMode": true
 }

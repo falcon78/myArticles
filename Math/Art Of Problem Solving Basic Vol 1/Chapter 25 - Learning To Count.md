@@ -33,8 +33,11 @@
 
 ## Restrictions on Multiplication
 
-- If the actions are not **Independent** then the Multiplication methods starts to break down.
-
+- If the actions are not **dependent** then the Multiplication methods starts to break down.
+- Sometimes the order in which we treat the contributors matters in restricted problems.
+  - eg. How many five-digit numbers ending in 1,2, or 4 are there with no digits repeated?
+    - You can't use `9 (can't have 0 here) * 9 * 8 * 7 * 3` because the first digit might include 1, 2 or 4 already.
+    - Thus you have to take care of the last digit first and first digit second (First digit can't have 0) : `(8 * 8 * 7 * 6 * 3)`
 ## Permutations, Arrangements, and $!$
 
 ### Permutations
@@ -58,6 +61,7 @@
 - Finding trailing zeros in end of a factorial.
   $$\large{f(n) = \sum_{i=1}^{k} \lfloor{\frac{n}{5^i}{}}\rfloor}$$
   $$\text{where k} = \lfloor{\log_5{n}}\rfloor$$
+  - Article : https://brilliant.org/wiki/trailing-number-of-zeros/ 
 
 ### Combinations
 

@@ -39,3 +39,90 @@
     <summary>Answer</summary>
      (e1 + 1) * (e2 + 1) * ... * (ek + 1)
 </details>
+
+### Exercise 25-6
+
+> How many divisors does 1,000,000 have?
+
+<details>
+    <summary>Answer</summary>
+     1,000,000 = 10^6 = 2^6 + 5^5 <br> 
+     (6+1) * (5+1) = 49 divisors.
+</details>
+
+### Exercise 25-8
+
+> How many four-letter words can be made without repeating the same letter twice?
+
+<details>
+    <summary>Answer</summary>
+     26 * 25 * 24 * 23 = 358800 ways
+</details>
+
+### Exercise 25-9
+
+> How many off numbers with middle digit 5 are there between 40000 and 69999 inclusive, with no digits repeated.
+
+<details>
+    <summary>Answer</summary>
+     $$ 2 * 7 * 1 * 6 * 4 = 336 $$</br>
+</details>
+
+### Exercise 25-10
+
+> In how many ways can a five letter "word" be written using only the first half of the alphabet with no repetitions such that the third and fifth letters are vowels and the first a consonant.
+
+<details>
+    <summary>Answer</summary>
+     5 * 2 * 10 * 10 * 9 = 5400 words.
+</details>
+
+### Exercise 25-11
+
+> In how many ways can a row of k seats be filled from a set of n people.
+
+<details>
+    <summary>Answer</summary>
+     nPk = (n) * (n-1) * (n-2) * .... * (n - k + 1) ways.
+</details>
+
+### Exercise 25-12
+
+Evaluate 3!, 7!, $_7P_3$, $_5P_4$
+
+<details>
+    <summary>Answer</summary>
+     1.  3*2*1 </br>
+     2.  7*6*5*4*3*2*1 </br>
+     3.  7*6*5 </br>
+     4.  5*4*3*2
+</details>
+
+### Exercise 25-14
+
+> What is the largest n such that $2^n$ divides $100!$
+
+ <details>
+     <summary>Answer</summary>
+      50 + 25 + 12 + 6 + 3 + 1 = 97
+ </details>
+ 
+### Exercise 25-15
+
+> How many ways are there to arrange 4 keys on a keychain.
+
+ <details>
+     <summary>Answer</summary>
+      (4-1)! / 2 = 3 ways.
+ </details>
+ 
+### Exercise 25-16
+
+> In how many ways can three different babies be put in two different (identical) playpens.
+
+<details>
+    <summary>Answer</summary>
+     Different playpens - 2*2*2 = 8 (each baby has independent choice) </br>
+     Identical playpens - 4
+
+</details>

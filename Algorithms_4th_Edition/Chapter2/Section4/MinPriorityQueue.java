@@ -106,6 +106,10 @@ public class MinPriorityQueue<T extends Comparable<T>> {
         }
     }
 
+    protected T peek() {
+        return pq[1];
+    }
+
     protected boolean isEmpty() {
         return N == 1;
     }

@@ -4,11 +4,14 @@
   data type.
 - Sets inherit all methods from `Collection<E>` interface, but doesn't add any new ones.
 - Common methods of sets are:
-  - `containes(Object o)` returns true only specified object is in the collection.
+  - `contains(Object o)` returns true only specified object is in the collection.
   - `add(E element)` adds a new element to the set.
   - `addAll(Collection<E> coll)` adds all elements from other collections to this set.
+    - known as *union* in maths term.
   - `retainAll(Collection<E> coll)` retains only the elements in this set that are contained in the specified collection.
+    - known as *intersection* in maths term.
   - `removeAll(Collection<E> coll)` removes from this set all elements that are contained in the specified collection.
+    - known as *difference* in maths term.
   - `size()` size of the collection.
   - `isEmpty()`
   - `clear()` Removes all elements.
@@ -57,10 +60,18 @@ set.contains(1) // true
 > ## TreeSet
 
 - Preserves order of elements inserted by their natural order. (using element's `Comparable` interface or by a custom Comparator implementation)
-- Implements `SortedSet` Interface.
+- Implements `SortedSet` Interface and adds the following methods.
 	- `Comparator<? super E> comparator()` returns the comparator used to order elements in the set or null if the set uses the natural ordering of its elements;
 	- `E first()` returns the first (lowest) element in the set;
 	- `E last()` returns the last (highest) element in the set;
 	- `SortedSet<E> headSet(E toElement)` returns a subset containing elements that are strictly less than toElement;
 	- `SortedSet<E> tailSet(E fromElement)` returns a subset containing elements that are greater than or equal to fromElement;
 	- `SortedSet<E> subSet(E fromElement, E toElement)` returns a subset containing elements in the range fromElement (inclusive) toElement (exclusive).
+- HashSet is much faster than TreeSet. (constant vs log-time for most operations.)
+
+> ## LinkedHashSet
+
+- As fast as `HashSet`
+- Keys are iterated in inserted order.
+  - Reinserting the same key does not change this order.
+- Uses extra memory than `HashSet`

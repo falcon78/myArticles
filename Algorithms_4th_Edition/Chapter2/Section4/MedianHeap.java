@@ -1,74 +1,120 @@
 package Chapter2.Section4;
 
+import javax.print.attribute.standard.Media;
+import java.util.*;
+
 /**
  * Exercise 2.4.30 Dynamic Median Finding
  * Design a data type that supports finding the median in constant time,
  * deleting the median logarithm time and insert in logarithm time.
  */
-public class MedianHeap<T extends Comparable<T>> {
-    enum Orientation {
-        MIN, MAX
-    };
+public class MedianHeap {
+    // stores elements bigger than median.
+    MinPriorityQueue<Double> minPQ = new MinPriorityQueue<>();
+    // stores elements smaller than median.
+    MaxPriorityQueue<Double> maxPQ = new MaxPriorityQueue<>();
 
-    public static void main(String[] args) {
+    protected Double median = null;
 
-    }
-
-    protected T median = null;
-    protected T[] minHeap;
-    protected int minHeapCurrentIndex = 1;
-    protected T[] maxHeap;
-    protected int maxHeapCurrentIndex = 1;
-
-    public void insert(T item) {
+    public void insert(Double item) throws Exception {
         if (median == null) {
-            median = item; 
+            median = item;
             return;
         }
+
 
         if (less(item, median)) {
-            minHeap[minHeapCurrentIndex] = item;
-            swim(minHeap, minHeapCurrentIndex, Orientation.MIN);
-            minHeapCurrentIndex++;
+            maxPQ.insert(item);
             return;
+        } else {
+            minPQ.insert(item);
         }
-        
-        maxHeap[maxHeapCurrentIndex] = item;
-        swim(maxHeap, maxHeapCurrentIndex, Orientation.MAX);
-        maxHeapCurrentIndex++;
+
+        int sizeDiff = minPQ.size() - maxPQ.size();
+        if (sizeDiff < -1) {
+            // remove from maxPQ (too much on maxPQ)
+            minPQ.insert(median);
+            median = maxPQ.removeMax();
+
+        } else if (sizeDiff > 1) {
+            // remove from minPQ (too much on minPQ)
+            maxPQ.insert(median);
+            median = minPQ.removeMin();
+        }
     }
 
-    public void removeMedian() {
+    public double removeMedian() throws Exception {
+        if (isEmpty()) {
+            throw new Exception("Out of elements");
+        }
 
-    }
-    
-    protected T removeMin() {
-        
+        double removedMedian = 0;
+        if (minPQ.size() > maxPQ.size()) {
+            removedMedian = (median + minPQ.removeMin()) / 2;
+        } else if (minPQ.size() < maxPQ.size()) {
+            removedMedian = (median + maxPQ.removeMax()) / 2;
+        } else if (!minPQ.isEmpty()) {
+            removedMedian = median;
+        }
+
+        if (!maxPQ.isEmpty())
+            median = maxPQ.removeMax();
+        else if (!minPQ.isEmpty())
+            median = minPQ.removeMin();
+        else
+            median = null;
+
+        return removedMedian;
     }
 
-    protected T removeMax() {
-        
+    public boolean isEmpty() {
+        return median == null;
     }
-    
+
     /**
      * Returns true when a is less than a.
      */
-    protected boolean less(T a, T b) {
-        return a.compreTo(b) < 0;
-    }
-    
-    protected boolean isEmpty(Orientation orientation) {
-        if (orientation == Orientation.MAX)
-            return maxHeapCurrentIndex <= 1;
-        
-        return minHeapCurrentIndex <= 1;
+    protected boolean less(Double a, Double b) {
+        return a.compareTo(b) < 0;
     }
 
-    public void swim(T[] arr, int index, Orientation orientation) {
-        
-    }
-    
-    public void sink(T[] arr, int index, Orientation orientation) {
-        
+    public static void main(String[] args) throws Exception {
+        MedianHeap medianHeap = new MedianHeap();
+        for (double i = 0; i < 10; i++) {
+            medianHeap.insert(i);
+        }
+        for (double expected : new double[]{4.5, 4.5, 4.5, 4.5, 4.5}) {
+            double actual = medianHeap.removeMedian();
+            assert expected == actual;
+        }
+
+        for (double v : new double[]{20, 12, 18, 30, 24, 1, 3, 7, 10, 8, 5, 26, 31, 27}) {
+            medianHeap.insert(v);
+        }
+        for (double expected : new double[]{15, 15, 16, 16.5, 16, 16.5, 16}) {
+            double actual = medianHeap.removeMedian();
+            assert expected == actual;
+        }
+
+
+        for (double v : new double[]{4, 10, 20, 42, 66, 54, 80}) {
+            medianHeap.insert(v);
+        }
+        assert medianHeap.removeMedian() == 42.;
+        medianHeap.insert(42.);
+        assert medianHeap.removeMedian() == 42.;
+        medianHeap.insert(42.);
+        medianHeap.insert(20.);
+        assert medianHeap.removeMedian() == 31.;
+
+        while (!medianHeap.isEmpty())
+            medianHeap.removeMedian();
+
+        for (double v: new double[]{1, 2, 5, 6, 7, 99, 100}) {
+            medianHeap.insert(v);
+        }
+        assert medianHeap.removeMedian() == 6;
+        while (!medianHeap.isEmpty())
+            medianHeap.removeMedian();
     }
 }

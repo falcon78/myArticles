@@ -4,6 +4,8 @@ import Chapter2.Section1.BaseSort;
 import Chapter2.Section3.*;
 import Chapter2.Section4.HeapSort;
 
+import java.util.Arrays;
+
 /**
  * Test performance of Different sort algorithms
  */
@@ -24,6 +26,7 @@ public class DoublingTest extends BaseSort {
         benchmark("iterative quicksort \n", iterativeQuickSort);
         benchmark("Bentley Mcllory + Turkey Ninther \n", bentleyMcllroy);
         benchmark("Heap Sort \n", heapSort);
+        benchmarkSystemSort();
     }
 
     public static void benchmark(String name, ISorter Sort) {
@@ -46,5 +49,27 @@ public class DoublingTest extends BaseSort {
         }
 
         System.out.println(name + "Exec Time: " + averageExecutionTime + "ms Growth Ratio: " + growthRatio + "\n");
+    }
+
+    public static void benchmarkSystemSort() {
+        long growthRatio = 0;
+        long averageExecutionTime = 0;
+        long previousTime = 0;
+
+        for (int i = 1; i < N; i = i * 2) {
+            long currentTime = System.currentTimeMillis();
+            Comparable[] a = unsortedArray(i);
+            Arrays.sort(a);
+            long executionTime = System.currentTimeMillis() - currentTime;
+            averageExecutionTime += executionTime;
+
+            if (previousTime > 0) {
+                growthRatio = executionTime / previousTime;
+            }
+
+            previousTime = executionTime;
+        }
+
+        System.out.println("System sort Exec Time: " + averageExecutionTime + "ms Growth Ratio: " + growthRatio + "\n");
     }
 }

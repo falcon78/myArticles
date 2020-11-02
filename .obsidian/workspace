@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "33edb8ffb3b621ca",
+        "id": "cb3f00e45dbea553",
         "type": "leaf",
         "active": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Personal Notes/Fighting Procrastination.md",
+            "file": "Math/Art Of Problem Solving Basic Vol 1/Chapter 25 - Questions.md",
             "mode": "preview"
           }
         }
@@ -43,6 +43,14 @@
                 "query": ""
               }
             }
+          },
+          {
+            "id": "b2a03db0a587f751",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
           }
         ]
       }
@@ -64,7 +72,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Personal Notes/Fighting Procrastination.md"
+                "file": "Math/Art Of Problem Solving Basic Vol 1/Chapter 25 - Questions.md"
               }
             }
           }
@@ -72,14 +80,15 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "lastOpenFiles": [
+    "Math/Art Of Problem Solving Basic Vol 1/Chapter 25 - Questions.md",
+    "Templates/Untitled.md",
+    "Untitled.md",
     "Personal Notes/Fighting Procrastination.md",
     "Python/Sanic/basics.md",
     "Python/Sanic/testing.md",
-    "Math/Art Of Problem Solving Basic Vol 1/Chapter 25 - Questions.md",
     "Math/Art Of Problem Solving Basic Vol 1/Chapter 25 - Learning To Count.md",
     "HyperSkill/JsonXmlConverter/Collections/Collections.md",
     "Math/Art Of Problem Solving Basic Vol 1/Chapter 2 - Complex Numbers.md",
