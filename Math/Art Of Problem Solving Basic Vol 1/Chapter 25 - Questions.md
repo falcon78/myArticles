@@ -126,3 +126,21 @@ Evaluate 3!, 7!, $_7P_3$, $_5P_4$
      Identical playpens - 4
 
 </details>
+
+### Exercise 25-17
+
+> In how many ways can three identical rattles be given to two different babies.
+
+<details>
+    <summary>Answer</summary>
+     Since the rattles are indistinguishable, the 4 choices are (3)(0), (2)(1), (1)(2), (0)(3)
+</details>
+
+### Exercise 25-18
+
+> In how many ordered sets of three of the eight Anne of Green Gables books are there if we insist that Anne of Avonlea be one?
+
+<details>
+    <summary>Answer</summary>
+     (8*7*6) - (7*6*5) = 126 ways.
+</details>

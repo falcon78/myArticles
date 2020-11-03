@@ -63,6 +63,14 @@
   $$\text{where k} = \lfloor{\log_5{n}}\rfloor$$
   - Article : https://brilliant.org/wiki/trailing-number-of-zeros/ 
 
+
+### Counting the wrong thing (Over-counting)
+
+- Calculate the every possibilities and subtract the ones you don't want. 
+  - (example) How many ways can we choose 4 students from 6 boys and 4 girls when there should be at least 1 boy?
+    - (count all possibilities) : $_{10}C_4$ = 210 ways.
+    - (possibilities with 0 boys, [the thing we dont want]) : $_4C_{4}$ = 1
+    - (remove what you don't want) : $210 - 1 = 209$ ways
 ### Combinations
 
 - $_nC_k = \dfrac{_nP_k}{k!}$
@@ -74,3 +82,5 @@
 - Generally
   - $\begin{pmatrix} n\\ k\\ \end{pmatrix}$ = $\begin{pmatrix} n\\ n-k\\ \end{pmatrix}$
     - Choosing `k` thing is the same as choosing `n - k` things we don't want.
+
+
