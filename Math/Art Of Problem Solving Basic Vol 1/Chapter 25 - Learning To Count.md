@@ -64,7 +64,7 @@
   - Article : https://brilliant.org/wiki/trailing-number-of-zeros/ 
 
 
-### Counting the wrong thing (Over-counting)
+### Counting the wrong thing
 
 - Calculate the every possibilities and subtract the ones you don't want. 
   - (example) How many ways can we choose 4 students from 6 boys and 4 girls when there should be at least 1 boy?
@@ -83,4 +83,8 @@
   - $\begin{pmatrix} n\\ k\\ \end{pmatrix}$ = $\begin{pmatrix} n\\ n-k\\ \end{pmatrix}$
     - Choosing `k` thing is the same as choosing `n - k` things we don't want.
 
+
+### Binomial Theorem
+
+- $(x + y)^n = \sum\limits_{i=0}^n \begin{pmatrix} n\\ i\\ \end{pmatrix} x^{n-i} y^i $
 

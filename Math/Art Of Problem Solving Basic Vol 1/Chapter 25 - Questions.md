@@ -144,3 +144,68 @@ Evaluate 3!, 7!, $_7P_3$, $_5P_4$
     <summary>Answer</summary>
      (8*7*6) - (7*6*5) = 126 ways.
 </details>
+
+
+### Exercise 25 - 19
+
+> What fraction of four letter "words" contain a repeated letter.
+
+<details>
+    <summary>Answer</summary>
+     (26^4 - 26P4) / 26^4
+</details>
+
+### Exercise 25-20
+
+> In how many ways can Ulysses choose 4 of the 11 Confederate states for attack?
+
+<details>
+    <summary>Answer</summary>
+     11C4 = 330 ways.
+</details>
+
+### Exercise 25-21, 22
+
+> Give the formula for combination.
+
+<details>
+    <summary>Answer</summary>
+     nCr = n! / (n-r)!r!
+</details>
+
+### Exercise 25-23
+
+> In how many ways can a three-person subcommittee be chosen from a five-person committee if a particular person must be on the subcommittee.
+
+<details>
+    <summary>Answer</summary>
+     4C2
+</details>
+
+### Exercise 25-25
+
+> How many ways are there to pick no objects from a set of n objects?
+
+<details>
+    <summary>Answer</summary>
+     1way. (nC0 = 1)
+</details>
+
+### Exercise 25-26
+
+> In how many ways can Catherine choose two nuts and two bolts if she has eight nuts and six bolts?
+
+<details>
+    <summary>Answer</summary>
+     6C2 * 8C2 = 420 ways.
+</details>
+
+### Exercise 25-27
+
+> In how many ways can the word RAMANUJAN be arranged? How about MINIMIZATION?
+
+<details>
+    <summary>Answer</summary>
+     RAMANUJAN = 9! / (3!2!) = 30240 </br>
+     MINIMIZATION = 12! / (4!2!2!) = 4989600
+</details>

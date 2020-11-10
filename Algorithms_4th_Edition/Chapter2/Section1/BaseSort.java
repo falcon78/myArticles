@@ -56,9 +56,23 @@ public class BaseSort {
      *
      * @param a Array with {@link Comparable} elements.
      */
-    protected static boolean isSorted(Comparable[] a) {
+    public static boolean isSorted(Comparable[] a) {
         for (int i = 1; i < a.length; i++) {
             if (a[i - 1].compareTo(a[i]) > 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     * Returns true if given array is sorted, false otherwise.
+     *
+     * @param a Array with {@link Integer} elements.
+     */
+    public static boolean isSorted(int[] a) {
+        for (int i = 1; i < a.length; i++) {
+            if (a[i - 1] > a[i]) {
                 return false;
             }
         }
